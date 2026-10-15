@@ -1,3 +1,6 @@
+.static-demo-page{min-height:100%;overflow-x:hidden}
+html{min-height:100%;overflow-y:auto}
+body.static-demo-page{height:auto;min-height:100vh;overflow-x:hidden;overflow-y:auto;touch-action:pan-y}
 .demo-search{display:grid;gap:8px;max-width:480px;margin:0 0 18px;color:#53739f;font-size:14px;font-weight:800}
 .demo-search input,.calculator-form input,.calculator-form select{box-sizing:border-box;width:100%;min-height:46px;padding:10px 13px;border:1px solid #d6e3f4;border-radius:10px;background:#fff;color:#17345f;font:inherit}
 .rd-categories .rd-category{cursor:pointer;text-decoration:none}
