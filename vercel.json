@@ -10,6 +10,10 @@
   },
   "routes": [
     {
+      "src": "^/$",
+      "dest": "/index.html"
+    },
+    {
       "src": "/build/(.*)",
       "dest": "/build/$1"
     },
