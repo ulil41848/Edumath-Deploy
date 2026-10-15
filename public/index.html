@@ -42,13 +42,78 @@
             <input id="feature-search" type="search" placeholder="Contoh: kuis, pustaka, guru" autocomplete="off">
         </label>
         <section class="rd-categories" aria-label="Kategori belajar">
-            <article class="rd-category rd-pink" data-feature="edubot ai tanya belajar"><span class="rd-category-icon">🤖</span><span class="rd-category-copy"><strong>Edubot</strong><small>Asisten belajar untuk membantu kamu.</small></span></article>
-            <article class="rd-category rd-blue" data-feature="pustaka buku materi referensi"><span class="rd-category-icon">📖</span><span class="rd-category-copy"><strong>Pustaka Edu</strong><small>Materi dan referensi pembelajaran.</small></span></article>
-            <article class="rd-category rd-purple" data-feature="kilas kelas video"><span class="rd-category-icon">▶️</span><span class="rd-category-copy"><strong>Kilas Belajar</strong><small>Ikuti kelas interaktif dengan mudah.</small></span></article>
-            <article class="rd-category rd-mint" data-feature="jadwal kursus kegiatan"><span class="rd-category-icon">🗓️</span><span class="rd-category-copy"><strong>Jadwal Kursus</strong><small>Lihat jadwal dan kegiatan belajar.</small></span></article>
-            <article class="rd-category rd-yellow" data-feature="guru pengajar"><span class="rd-category-icon">🏆</span><span class="rd-category-copy"><strong>Mode Sang Guru</strong><small>Fitur khusus untuk guru dan pengajar.</small></span></article>
+            <a class="rd-category rd-pink" data-feature="edubot ai tanya belajar" href="#demo-edubot"><span class="rd-category-icon">🤖</span><span class="rd-category-copy"><strong>Edubot</strong><small>Asisten belajar untuk membantu kamu.</small></span></a>
+            <a class="rd-category rd-blue" data-feature="pustaka buku materi referensi" href="#demo-pustaka"><span class="rd-category-icon">📖</span><span class="rd-category-copy"><strong>Pustaka Edu</strong><small>Materi dan referensi pembelajaran.</small></span></a>
+            <a class="rd-category rd-purple" data-feature="kilas kelas video" href="#demo-kilas"><span class="rd-category-icon">▶️</span><span class="rd-category-copy"><strong>Kilas Belajar</strong><small>Ikuti kelas interaktif dengan mudah.</small></span></a>
+            <a class="rd-category rd-mint" data-feature="jadwal kursus kegiatan" href="#demo-jadwal"><span class="rd-category-icon">🗓️</span><span class="rd-category-copy"><strong>Jadwal Kursus</strong><small>Lihat jadwal dan kegiatan belajar.</small></span></a>
+            <a class="rd-category rd-yellow" data-feature="guru pengajar" href="#demo-guru"><span class="rd-category-icon">🏆</span><span class="rd-category-copy"><strong>Mode Sang Guru</strong><small>Fitur khusus untuk guru dan pengajar.</small></span></a>
         </section>
         <p class="demo-empty" id="feature-empty" hidden>Fitur tidak ditemukan. Coba kata kunci lain.</p>
+
+        <section class="feature-demos" aria-label="Demo fitur EduMath">
+            <article class="demo-panel feature-demo" id="demo-edubot">
+                <p class="rd-eyebrow">🤖 EDUBOT</p>
+                <h2>Teman belajar matematika</h2>
+                <p class="demo-description">Tanya hitungan dasar atau pilih contoh. Demo ini menjawab secara lokal tanpa layanan AI.</p>
+                <div class="suggestion-row"><button type="button" class="suggestion" data-prompt="Berapa 125 dibagi 5?">125 ÷ 5</button><button type="button" class="suggestion" data-prompt="Apa itu pecahan?">Apa itu pecahan?</button><button type="button" class="suggestion" data-prompt="Bagaimana menghitung luas persegi?">Luas persegi</button></div>
+                <div class="chat-output" id="edubot-output" aria-live="polite"><p class="chat-bubble bot-bubble">Halo! Tulis pertanyaan matematika untuk mencoba Edubot.</p></div>
+                <form class="demo-form chat-form" id="edubot-form"><label class="sr-only" for="edubot-question">Pertanyaan untuk Edubot</label><input id="edubot-question" name="question" maxlength="240" placeholder="Contoh: Berapa 12 × 8?" required><button class="demo-button" type="submit">Kirim</button></form>
+            </article>
+
+            <article class="demo-panel feature-demo" id="demo-pustaka">
+                <p class="rd-eyebrow">📖 PUSTAKA EDU</p>
+                <h2>Jelajahi ringkasan materi</h2>
+                <p class="demo-description">Cari topik lalu buka ringkasannya untuk membaca contoh dasar.</p>
+                <label class="demo-search" for="library-search">Cari materi<input id="library-search" type="search" placeholder="Misalnya pecahan atau geometri"></label>
+                <div class="library-list">
+                    <article class="library-item" data-library="pecahan pembilang penyebut matematika"><div><strong>Pecahan Dasar</strong><small>Pembilang, penyebut, dan pecahan senilai</small></div><button type="button" class="text-button" data-read="fraction">Baca ringkasan</button></article>
+                    <article class="library-item" data-library="geometri luas keliling persegi panjang"><div><strong>Luas dan Keliling</strong><small>Rumus bangun datar sederhana</small></div><button type="button" class="text-button" data-read="geometry">Baca ringkasan</button></article>
+                    <article class="library-item" data-library="aljabar variabel persamaan"><div><strong>Persamaan Linear</strong><small>Memahami variabel dan mencari nilai x</small></div><button type="button" class="text-button" data-read="algebra">Baca ringkasan</button></article>
+                </div>
+                <p class="demo-empty" id="library-empty" hidden>Materi tidak ditemukan.</p>
+                <div class="library-output" id="library-output" aria-live="polite">Pilih materi untuk menampilkan ringkasannya.</div>
+            </article>
+
+            <article class="demo-panel feature-demo" id="demo-kilas">
+                <p class="rd-eyebrow">▶️ KILAS BELAJAR</p>
+                <h2>Pelajaran singkat</h2>
+                <p class="demo-description">Buka satu pelajaran, baca konsepnya, lalu jawab soal untuk mengecek pemahaman.</p>
+                <div class="lesson-list">
+                    <details class="lesson-card"><summary>Persentase dalam 1 menit</summary><p>Persen berarti “per seratus”. Untuk mencari 20% dari 150, ubah 20% menjadi 0,2 lalu hitung 0,2 × 150 = 30.</p><p class="lesson-question">Coba: 10% dari 80 adalah…</p><div class="lesson-options"><button type="button" data-answer="correct">8</button><button type="button" data-answer="wrong">10</button><button type="button" data-answer="wrong">18</button></div><p class="lesson-feedback" aria-live="polite"></p></details>
+                    <details class="lesson-card"><summary>Keliling persegi panjang</summary><p>Keliling adalah jumlah semua sisi. Rumus praktisnya 2 × (panjang + lebar).</p><p class="lesson-question">Panjang 9 cm dan lebar 4 cm. Kelilingnya?</p><div class="lesson-options"><button type="button" data-answer="wrong">13 cm</button><button type="button" data-answer="correct">26 cm</button><button type="button" data-answer="wrong">36 cm</button></div><p class="lesson-feedback" aria-live="polite"></p></details>
+                    <details class="lesson-card"><summary>Persamaan sederhana</summary><p>Lakukan operasi kebalikan pada kedua sisi. Jika x + 7 = 12, kurangi kedua sisi dengan 7 sehingga x = 5.</p><p class="lesson-question">Jika x − 3 = 10, nilai x adalah…</p><div class="lesson-options"><button type="button" data-answer="correct">13</button><button type="button" data-answer="wrong">7</button><button type="button" data-answer="wrong">30</button></div><p class="lesson-feedback" aria-live="polite"></p></details>
+                </div>
+            </article>
+
+            <article class="demo-panel feature-demo" id="demo-jadwal">
+                <p class="rd-eyebrow">🗓️ JADWAL KURSUS</p>
+                <h2>Atur rencana belajar</h2>
+                <p class="demo-description">Tambahkan kursus latihan ke jadwal demo. Data disimpan di browser ini.</p>
+                <form class="demo-form schedule-form" id="schedule-form">
+                    <label>Nama kegiatan<input name="title" maxlength="60" placeholder="Contoh: Latihan aljabar" required></label>
+                    <label>Tanggal<input name="date" type="date" required></label>
+                    <label>Waktu<input name="time" type="time" required></label>
+                    <button class="demo-button" type="submit">Tambah jadwal</button>
+                </form>
+                <p class="form-feedback" id="schedule-feedback" aria-live="polite"></p>
+                <h3 class="list-heading">Jadwal tersimpan</h3>
+                <ul class="schedule-list" id="schedule-list"></ul>
+                <p class="demo-empty" id="schedule-empty">Belum ada jadwal. Tambahkan kegiatan di atas.</p>
+            </article>
+
+            <article class="demo-panel feature-demo" id="demo-guru">
+                <p class="rd-eyebrow">🏆 MODE SANG GURU</p>
+                <h2>Buat soal pilihan ganda</h2>
+                <p class="demo-description">Isi pertanyaan dan pilihan jawaban. Pratinjau bisa langsung dicoba; tidak dipublikasikan.</p>
+                <form class="teacher-form" id="teacher-form">
+                    <label>Pertanyaan<input name="question" maxlength="180" placeholder="Contoh: Berapa 9 × 6?" required></label>
+                    <div class="answer-grid"><label>Pilihan A<input name="choiceA" maxlength="80" required></label><label>Pilihan B<input name="choiceB" maxlength="80" required></label><label>Pilihan C<input name="choiceC" maxlength="80" required></label><label>Pilihan D<input name="choiceD" maxlength="80" required></label></div>
+                    <label>Jawaban benar<select name="correct"><option value="0">A</option><option value="1">B</option><option value="2">C</option><option value="3">D</option></select></label>
+                    <button class="demo-button" type="submit">Buat pratinjau</button>
+                </form>
+                <div class="teacher-preview" id="teacher-preview" aria-live="polite"><p>Pratinjau soal akan tampil di sini.</p></div>
+            </article>
+        </section>
 
         <section class="demo-tools" aria-label="Aktivitas belajar mandiri">
             <div class="demo-panel" id="latihan">

@@ -139,5 +139,181 @@
         emptyEl.hidden = visible > 0;
     });
 
+    const botForm = document.getElementById('edubot-form');
+    const botInput = document.getElementById('edubot-question');
+    const botOutput = document.getElementById('edubot-output');
+    const botReply = (question) => {
+        const arithmetic = question.match(/(-?\d+(?:[.,]\d+)?)\s*([+\-×x*÷/])\s*(-?\d+(?:[.,]\d+)?)/i);
+        if (arithmetic) {
+            const left = Number(arithmetic[1].replace(',', '.'));
+            const right = Number(arithmetic[3].replace(',', '.'));
+            const symbol = arithmetic[2].toLowerCase();
+            const operation = symbol === '×' || symbol === 'x' || symbol === '*' ? '×'
+                : symbol === '÷' || symbol === '/' ? '÷' : symbol;
+            if (operation === '÷' && right === 0) return 'Pembagian dengan nol tidak bisa dilakukan. Coba angka pembagi lain.';
+            const result = operation === '+' ? left + right
+                : operation === '-' ? left - right
+                    : operation === '×' ? left * right : left / right;
+            return `${left} ${operation} ${right} = ${new Intl.NumberFormat('id-ID', { maximumFractionDigits: 8 }).format(result)}. ${operation === '×' ? 'Perkalian bisa dipahami sebagai penjumlahan berulang.' : operation === '÷' ? 'Pembagian membagi jumlah menjadi kelompok yang sama.' : 'Periksa kembali tanda operasi dan nilainya.'}`;
+        }
+        const normalized = question.toLocaleLowerCase('id');
+        if (normalized.includes('pecahan')) return 'Pecahan menyatakan bagian dari satu keseluruhan. Pada 3/4, angka 3 adalah pembilang (bagian yang diambil) dan 4 adalah penyebut (jumlah bagian yang sama besar).';
+        if (normalized.includes('luas') && normalized.includes('persegi')) return 'Luas persegi = sisi × sisi. Contoh: sisi 5 cm menghasilkan luas 5 × 5 = 25 cm².';
+        if (normalized.includes('persen') || normalized.includes('persentase')) return 'Persen berarti per seratus. Contoh: 25% = 25/100 = 0,25. Untuk mencari 25% dari 80, hitung 0,25 × 80 = 20.';
+        return 'Aku bisa bantu hitung operasi dasar (contoh: 12 × 8), menjelaskan pecahan, persentase, atau luas persegi. Coba salah satu contoh di atas!';
+    };
+    const sendBotMessage = (message) => {
+        const cleanMessage = message.trim();
+        if (!cleanMessage) return;
+        const userBubble = document.createElement('p');
+        userBubble.className = 'chat-bubble user-bubble';
+        userBubble.textContent = cleanMessage;
+        const answerBubble = document.createElement('p');
+        answerBubble.className = 'chat-bubble bot-bubble';
+        answerBubble.textContent = botReply(cleanMessage);
+        botOutput.replaceChildren(userBubble, answerBubble);
+    };
+    botForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        sendBotMessage(botInput.value);
+    });
+    document.querySelectorAll('[data-prompt]').forEach((button) => {
+        button.addEventListener('click', () => {
+            botInput.value = button.dataset.prompt;
+            sendBotMessage(botInput.value);
+        });
+    });
+
+    const libraryItems = [...document.querySelectorAll('.library-item')];
+    const librarySearch = document.getElementById('library-search');
+    const libraryEmpty = document.getElementById('library-empty');
+    const libraryOutput = document.getElementById('library-output');
+    librarySearch.addEventListener('input', () => {
+        const query = librarySearch.value.trim().toLocaleLowerCase('id');
+        let count = 0;
+        libraryItems.forEach((item) => {
+            const visible = `${item.dataset.library} ${item.textContent}`.toLocaleLowerCase('id').includes(query);
+            item.hidden = !visible;
+            if (visible) count += 1;
+        });
+        libraryEmpty.hidden = count > 0;
+    });
+    const bookNotes = {
+        fraction: 'PECahan\n\nPecahan berbentuk a/b. a disebut pembilang, b disebut penyebut, dan b tidak boleh nol. Pecahan senilai punya nilai sama, misalnya 1/2 = 2/4. Untuk menjumlahkan pecahan berpenyebut sama, jumlahkan pembilangnya: 1/5 + 2/5 = 3/5.',
+        geometry: 'LUAS DAN KELILING\n\nPersegi: luas = sisi × sisi, keliling = 4 × sisi.\nPersegi panjang: luas = panjang × lebar, keliling = 2 × (panjang + lebar).\nContoh: panjang 8 cm dan lebar 3 cm memiliki luas 24 cm² dan keliling 22 cm.',
+        algebra: 'PERSAMAAN LINEAR\n\nVariabel adalah lambang nilai yang belum diketahui. Untuk menyelesaikan persamaan, lakukan operasi yang sama pada kedua sisi.\nContoh: 2x + 4 = 14 → 2x = 10 → x = 5.'
+    };
+    document.querySelectorAll('[data-read]').forEach((button) => {
+        button.addEventListener('click', () => {
+            libraryOutput.textContent = bookNotes[button.dataset.read] || 'Ringkasan belum tersedia.';
+        });
+    });
+
+    document.querySelectorAll('.lesson-options').forEach((options) => {
+        options.addEventListener('click', (event) => {
+            const button = event.target.closest('button[data-answer]');
+            if (!button) return;
+            const feedback = options.parentElement.querySelector('.lesson-feedback');
+            [...options.querySelectorAll('button')].forEach((choice) => { choice.disabled = true; });
+            feedback.textContent = button.dataset.answer === 'correct' ? 'Betul! Kamu memahami konsepnya.' : 'Belum tepat. Baca lagi ringkasan di atas dan coba pelajari langkahnya.';
+            feedback.style.color = button.dataset.answer === 'correct' ? '#167653' : '#a34848';
+        });
+    });
+
+    const scheduleForm = document.getElementById('schedule-form');
+    const scheduleList = document.getElementById('schedule-list');
+    const scheduleEmpty = document.getElementById('schedule-empty');
+    const scheduleFeedback = document.getElementById('schedule-feedback');
+    const scheduleStorageKey = 'edumath-static-schedule';
+    const readSchedule = () => {
+        try {
+            const value = JSON.parse(localStorage.getItem(scheduleStorageKey) || '[]');
+            return Array.isArray(value) ? value.filter((item) => item && typeof item.id === 'string' && typeof item.title === 'string') : [];
+        } catch { return []; }
+    };
+    const renderSchedule = () => {
+        const items = readSchedule().sort((a, b) => `${a.date} ${a.time}`.localeCompare(`${b.date} ${b.time}`));
+        scheduleList.replaceChildren();
+        scheduleEmpty.hidden = items.length > 0;
+        items.forEach((item) => {
+            const row = document.createElement('li');
+            row.className = 'schedule-item';
+            const details = document.createElement('div');
+            const title = document.createElement('strong');
+            title.textContent = item.title;
+            const date = document.createElement('small');
+            const parsedDate = new Date(`${item.date}T${item.time}`);
+            date.textContent = Number.isNaN(parsedDate.getTime()) ? `${item.date} · ${item.time}` : `${new Intl.DateTimeFormat('id-ID', { dateStyle: 'full' }).format(parsedDate)} · ${item.time}`;
+            details.append(title, date);
+            const remove = document.createElement('button');
+            remove.type = 'button';
+            remove.className = 'remove-schedule';
+            remove.textContent = 'Hapus';
+            remove.setAttribute('aria-label', `Hapus jadwal ${item.title}`);
+            remove.addEventListener('click', () => {
+                try {
+                    localStorage.setItem(scheduleStorageKey, JSON.stringify(readSchedule().filter((saved) => saved.id !== item.id)));
+                    renderSchedule();
+                    scheduleFeedback.textContent = 'Jadwal dihapus dari browser ini.';
+                } catch { scheduleFeedback.textContent = 'Penyimpanan browser tidak tersedia.'; }
+            });
+            row.append(details, remove);
+            scheduleList.append(row);
+        });
+    };
+    const scheduleDateInput = scheduleForm.elements.date;
+    const localToday = new Date();
+    scheduleDateInput.min = `${localToday.getFullYear()}-${String(localToday.getMonth() + 1).padStart(2, '0')}-${String(localToday.getDate()).padStart(2, '0')}`;
+    scheduleForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const data = new FormData(scheduleForm);
+        const entry = { id: `${Date.now()}-${Math.random().toString(36).slice(2)}`, title: String(data.get('title')).trim(), date: String(data.get('date')), time: String(data.get('time')) };
+        if (!entry.title || entry.date < scheduleDateInput.min) {
+            scheduleFeedback.textContent = 'Pilih tanggal hari ini atau setelahnya dan isi nama kegiatan.';
+            return;
+        }
+        try {
+            const items = readSchedule();
+            if (items.some((item) => item.date === entry.date && item.time === entry.time)) {
+                scheduleFeedback.textContent = 'Sudah ada jadwal pada waktu tersebut. Pilih waktu lain.';
+                return;
+            }
+            items.push(entry);
+            localStorage.setItem(scheduleStorageKey, JSON.stringify(items));
+            scheduleForm.reset();
+            scheduleDateInput.min = `${localToday.getFullYear()}-${String(localToday.getMonth() + 1).padStart(2, '0')}-${String(localToday.getDate()).padStart(2, '0')}`;
+            scheduleFeedback.textContent = 'Jadwal berhasil ditambahkan dan tersimpan di browser ini.';
+            renderSchedule();
+        } catch { scheduleFeedback.textContent = 'Penyimpanan browser tidak tersedia.'; }
+    });
+    renderSchedule();
+
+    const teacherForm = document.getElementById('teacher-form');
+    const teacherPreview = document.getElementById('teacher-preview');
+    teacherForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const values = new FormData(teacherForm);
+        const question = document.createElement('h3');
+        question.textContent = String(values.get('question')).trim();
+        const choices = ['choiceA', 'choiceB', 'choiceC', 'choiceD'].map((name) => String(values.get(name)).trim());
+        const correct = Number(values.get('correct'));
+        const feedback = document.createElement('p');
+        feedback.className = 'teacher-preview-feedback';
+        feedback.setAttribute('aria-live', 'polite');
+        const buttons = choices.map((choice, index) => {
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.className = 'quiz-option';
+            button.textContent = `${String.fromCharCode(65 + index)}. ${choice}`;
+            button.addEventListener('click', () => {
+                [...teacherPreview.querySelectorAll('.quiz-option')].forEach((option) => { option.disabled = true; });
+                feedback.textContent = index === correct ? 'Benar! Jawabanmu tepat.' : `Belum tepat. Jawaban benar: ${String.fromCharCode(65 + correct)}. ${choices[correct]}`;
+                feedback.style.color = index === correct ? '#167653' : '#a34848';
+            });
+            return button;
+        });
+        teacherPreview.replaceChildren(question, ...buttons, feedback);
+    });
+
     showStats();
 })();
