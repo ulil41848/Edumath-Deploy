@@ -6,6 +6,7 @@
     <meta name="theme-color" content="#1688ef">
     <title>EduMath — Belajar jadi menyenangkan</title>
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/static-demo.css">
 </head>
 <body style="margin:0;background:#f5f9ff;color:#17345f;font-family:Arial,sans-serif">
     <header class="rd-header">
@@ -37,14 +38,47 @@
             <article class="rd-stat rd-stat-blue"><span class="rd-stat-icon">✨</span><div><strong>Berlatih</strong><p>Ruang untuk berkembang</p></div></article>
         </section>
         <div class="rd-section-heading" id="fitur"><div><p class="rd-eyebrow">JELAJAHI FITUR</p><h2>Kategori Belajar</h2></div></div>
+        <label class="demo-search" for="feature-search">Cari fitur
+            <input id="feature-search" type="search" placeholder="Contoh: kuis, pustaka, guru" autocomplete="off">
+        </label>
         <section class="rd-categories" aria-label="Kategori belajar">
-            <article class="rd-category rd-pink"><span class="rd-category-icon">🤖</span><span class="rd-category-copy"><strong>Edubot</strong><small>Asisten belajar untuk membantu kamu.</small></span></article>
-            <article class="rd-category rd-blue"><span class="rd-category-icon">📖</span><span class="rd-category-copy"><strong>Pustaka Edu</strong><small>Materi dan referensi pembelajaran.</small></span></article>
-            <article class="rd-category rd-purple"><span class="rd-category-icon">▶️</span><span class="rd-category-copy"><strong>Kilas Belajar</strong><small>Ikuti kelas interaktif dengan mudah.</small></span></article>
-            <article class="rd-category rd-mint"><span class="rd-category-icon">🗓️</span><span class="rd-category-copy"><strong>Jadwal Kursus</strong><small>Lihat jadwal dan kegiatan belajar.</small></span></article>
-            <article class="rd-category rd-yellow"><span class="rd-category-icon">🏆</span><span class="rd-category-copy"><strong>Mode Sang Guru</strong><small>Fitur khusus untuk guru dan pengajar.</small></span></article>
+            <article class="rd-category rd-pink" data-feature="edubot ai tanya belajar"><span class="rd-category-icon">🤖</span><span class="rd-category-copy"><strong>Edubot</strong><small>Asisten belajar untuk membantu kamu.</small></span></article>
+            <article class="rd-category rd-blue" data-feature="pustaka buku materi referensi"><span class="rd-category-icon">📖</span><span class="rd-category-copy"><strong>Pustaka Edu</strong><small>Materi dan referensi pembelajaran.</small></span></article>
+            <article class="rd-category rd-purple" data-feature="kilas kelas video"><span class="rd-category-icon">▶️</span><span class="rd-category-copy"><strong>Kilas Belajar</strong><small>Ikuti kelas interaktif dengan mudah.</small></span></article>
+            <article class="rd-category rd-mint" data-feature="jadwal kursus kegiatan"><span class="rd-category-icon">🗓️</span><span class="rd-category-copy"><strong>Jadwal Kursus</strong><small>Lihat jadwal dan kegiatan belajar.</small></span></article>
+            <article class="rd-category rd-yellow" data-feature="guru pengajar"><span class="rd-category-icon">🏆</span><span class="rd-category-copy"><strong>Mode Sang Guru</strong><small>Fitur khusus untuk guru dan pengajar.</small></span></article>
+        </section>
+        <p class="demo-empty" id="feature-empty" hidden>Fitur tidak ditemukan. Coba kata kunci lain.</p>
+
+        <section class="demo-tools" aria-label="Aktivitas belajar mandiri">
+            <div class="demo-panel" id="latihan">
+                <p class="rd-eyebrow">LATIHAN MANDIRI</p>
+                <h2>Kuis Matematika</h2>
+                <p class="demo-description">Jawab lima soal singkat. Skor terbaik tersimpan di browser ini.</p>
+                <div class="quiz-meta" id="quiz-meta" aria-live="polite">Skor terbaik: 0 · Kuis selesai: 0</div>
+                <div class="quiz-card" id="quiz-card">
+                    <h3 id="quiz-question">Siap mengasah kemampuanmu?</h3>
+                    <div class="quiz-options" id="quiz-options"></div>
+                    <p class="quiz-feedback" id="quiz-feedback" aria-live="polite"></p>
+                    <button class="demo-button" id="quiz-action" type="button">Mulai kuis</button>
+                </div>
+            </div>
+
+            <div class="demo-panel" id="kalkulator">
+                <p class="rd-eyebrow">ALAT BANTU</p>
+                <h2>Kalkulator</h2>
+                <p class="demo-description">Hitung operasi dasar bilangan bulat dan desimal.</p>
+                <form id="calculator-form" class="calculator-form">
+                    <label>Angka pertama<input name="first" type="number" step="any" required inputmode="decimal"></label>
+                    <label>Operasi<select name="operator" aria-label="Operasi"><option value="+">Tambah (+)</option><option value="-">Kurang (−)</option><option value="*">Kali (×)</option><option value="/">Bagi (÷)</option></select></label>
+                    <label>Angka kedua<input name="second" type="number" step="any" required inputmode="decimal"></label>
+                    <button class="demo-button" type="submit">Hitung</button>
+                </form>
+                <p class="calculator-result" id="calculator-result" aria-live="polite">Hasil akan muncul di sini.</p>
+            </div>
         </section>
         <footer class="rd-footer"><span>© 2026 EduMath</span><em>Belajar jadi lebih menyenangkan ✨</em></footer>
     </main>
+    <script src="/static-demo.js" defer></script>
 </body>
 </html>

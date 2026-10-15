@@ -1,0 +1,28 @@
+.demo-search{display:grid;gap:8px;max-width:480px;margin:0 0 18px;color:#53739f;font-size:14px;font-weight:800}
+.demo-search input,.calculator-form input,.calculator-form select{box-sizing:border-box;width:100%;min-height:46px;padding:10px 13px;border:1px solid #d6e3f4;border-radius:10px;background:#fff;color:#17345f;font:inherit}
+.rd-categories .rd-category{cursor:default}
+.demo-empty{padding:16px;color:#7185a5}
+.rd-categories [hidden],.demo-button[hidden]{display:none!important}
+.demo-tools{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:34px}
+.demo-panel{min-width:0;padding:24px;border:1px solid #e8effa;border-radius:16px;background:#fff;box-shadow:0 8px 24px #214f830a}
+.demo-panel h2{margin:5px 0 8px;color:#17345f;font-size:clamp(22px,2vw,29px)}
+.demo-description{min-height:42px;color:#7185a5;line-height:1.55}
+.quiz-meta{margin:18px 0 12px;padding:10px 13px;border-radius:10px;background:#f2f7ff;color:#44648f;font-size:14px;font-weight:700}
+.quiz-card{padding:18px;border-radius:13px;background:#f7faff}
+.quiz-card h3{margin:0 0 14px;color:#17345f;font-size:18px;line-height:1.45}
+.quiz-options{display:grid;gap:9px}
+.quiz-option{width:100%;padding:12px 14px;border:1px solid #dce8f7;border-radius:10px;background:#fff;color:#24476f;text-align:left;font:inherit;cursor:pointer}
+.quiz-option:hover:not(:disabled),.quiz-option:focus-visible{border-color:#1688ef;outline:2px solid #1688ef33}
+.quiz-option:disabled{cursor:default;opacity:1}
+.quiz-option.is-correct{border-color:#21a67a;background:#e9fbf3;color:#126a4c}
+.quiz-option.is-wrong{border-color:#e37c7c;background:#fff0f0;color:#9b3333}
+.quiz-feedback{min-height:24px;margin:12px 0;color:#44648f;line-height:1.5}
+.demo-button{min-height:44px;padding:10px 18px;border:0;border-radius:10px;background:#167fe3;color:#fff;font:700 15px inherit;cursor:pointer}
+.demo-button:hover{background:#106bc2}
+.demo-button:focus-visible{outline:3px solid #91c8ff;outline-offset:2px}
+.calculator-form{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:20px}
+.calculator-form label{display:grid;gap:7px;color:#53739f;font-size:14px;font-weight:700}
+.calculator-form .demo-button{align-self:end}
+.calculator-result{min-height:28px;margin-top:18px;padding:14px;border-radius:10px;background:#eaf6ff;color:#155c9f;font-size:18px;font-weight:800;overflow-wrap:anywhere}
+@media(max-width:760px){.demo-tools{grid-template-columns:1fr}.demo-description{min-height:0}}
+@media(max-width:440px){.demo-panel{padding:17px}.calculator-form{grid-template-columns:1fr}.quiz-card{padding:14px}}
