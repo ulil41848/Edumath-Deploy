@@ -1,0 +1,2397 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+
+/* SEMUA SCREEN */
+
+.screen {
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/* SPLASH */
+
+.splash-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        to bottom,
+        #09baf0 0%,
+        #08aee7 60%,
+        #071326 100%
+    );
+}
+
+.splash-content {
+    text-align: center;
+}
+
+.logo {
+    width: 230px;
+    max-width: 70vw;
+}
+
+.splash-content h1 {
+    margin-top: 10px;
+    font-size: 45px;
+    color: #071326;
+}
+
+.splash-content h1 span {
+    color: #071326;
+}
+
+
+/* LOGIN */
+
+.login-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        to bottom,
+        #09baf0 0%,
+        #08aee7 60%,
+        #071326 100%
+    );
+}
+
+.login-content {
+    width: 90%;
+    max-width: 380px;
+
+    text-align: left;
+}
+
+.login-logo {
+    display: block;
+
+    width: 120px;
+
+    margin: 0 auto 5px;
+}
+
+.login-content h2 {
+    text-align: center;
+
+    color: #071326;
+
+    margin-bottom: 25px;
+}
+
+
+.login-content label {
+    display: block;
+
+    color: white;
+
+    font-size: 11px;
+
+    margin-top: 12px;
+    margin-bottom: 6px;
+}
+
+
+.login-content input {
+    width: 100%;
+
+    height: 45px;
+
+    padding: 0 14px;
+
+    border-radius: 9px;
+
+    border: 1px solid #ffc107;
+
+    background: rgba(0, 180, 235, 0.35);
+
+    color: white;
+
+    outline: none;
+}
+
+
+.forgot {
+    display: block;
+
+    text-align: right;
+
+    margin-top: 10px;
+
+    color: #ffd21f;
+
+    font-size: 11px;
+}
+
+
+.login-content button {
+    width: 100%;
+
+    height: 48px;
+
+    margin-top: 22px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background: #ffb900;
+
+    color: #111;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.login-content p {
+    text-align: center;
+
+    color: #d9f6ff;
+
+    font-size: 11px;
+
+    margin-top: 12px;
+}
+
+
+.login-content p a {
+    color: #ffd21f;
+
+    font-weight: bold;
+}
+
+
+/* HIDDEN */
+
+.hidden {
+    display: none !important;
+}
+
+.logo-text {
+    font-family: 'Nunito', sans-serif !important;
+    font-weight: 800;
+}
+
+.logo-text span:first-child {
+    color: black !important;
+}
+
+.logo-text span:last-child {
+    color: white !important;
+}
+/* =========================
+   HOME PAGE
+========================= */
+
+.home-screen {
+    background: #f5f5f5;
+    overflow-y: auto;
+    color: #071326;
+}
+
+/* HEADER */
+
+.home-header {
+    height: 75px;
+    padding: 20px 18px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #09baf0;
+}
+
+.home-logo {
+    margin: 0;
+
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.home-logo span:first-child {
+    color: #071326;
+}
+
+.home-logo span:last-child {
+    color: white;
+}
+
+.header-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.header-icons span {
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+
+    color: white;
+    font-size: 20px;
+}
+
+
+/* PROFILE */
+
+.profile-card {
+    margin: 0 0 0 0;
+    padding: 18px;
+
+    display: flex;
+    align-items: center;
+
+    background: linear-gradient(
+        to bottom,
+        #09baf0,
+        #08aee7
+    );
+
+    border-radius: 0 0 18px 18px;
+}
+
+.profile-avatar {
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+    background: white;
+
+    overflow: hidden;
+}
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info {
+    margin-left: 12px;
+}
+
+.profile-info h3 {
+    margin: 0;
+
+    color: white;
+    font-size: 15px;
+}
+
+.profile-info p {
+    margin: 3px 0 0;
+
+    color: #d9f6ff;
+    font-size: 11px;
+}
+
+
+/* STATISTIK */
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+
+    padding: 15px 10px;
+
+    background: #08aee7;
+}
+
+.stat {
+    text-align: center;
+    color: white;
+}
+
+.stat strong {
+    display: block;
+
+    font-size: 18px;
+}
+
+.stat span {
+    font-size: 9px;
+}
+
+
+/* KATEGORI */
+
+.category-title {
+    margin: 18px 15px 10px;
+
+    font-size: 12px;
+    color: #071326;
+}
+
+
+/* GRID */
+
+.category-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    padding: 0 10px 20px;
+}
+
+
+/* CARD */
+
+.category-card {
+    min-height: 125px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0 2px 7px rgba(0,0,0,0.15);
+
+    cursor: pointer;
+}
+
+.category-icon {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #fff9e8;
+
+    border-radius: 50%;
+
+    font-size: 35px;
+}
+
+.category-card p {
+    margin-top: 8px;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    color: #333;
+}
+/* =========================
+   FEATURE PAGES
+========================= */
+
+.feature-screen {
+    background: #f5f7fa;
+    overflow-y: auto;
+    color: #071326;
+}
+
+
+/* HEADER */
+
+.feature-header {
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 18px;
+
+    background: linear-gradient(
+        to bottom,
+        #4aaef5,
+        #2098ed
+    );
+
+    color: white;
+
+    border-radius: 0 0 18px 18px;
+}
+
+.feature-header h2 {
+    margin-left: 10px;
+
+    font-size: 18px;
+    font-weight: 800;
+}
+
+
+/* TOMBOL KEMBALI */
+
+.back-button {
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(255,255,255,0.2);
+
+    border-radius: 50%;
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+
+/* DESKRIPSI */
+
+.feature-description {
+    margin: 0 12px;
+
+    padding: 15px;
+
+    background: linear-gradient(
+        135deg,
+        #08b8ef,
+        #2196ed
+    );
+
+    color: white;
+
+    border-radius: 0 0 18px 18px;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+}
+
+
+/* JUDUL KATEGORI */
+
+.feature-screen h3 {
+    margin: 18px 15px 10px;
+
+    font-size: 12px;
+}
+
+
+/* LIST */
+
+.feature-list {
+    padding: 0 12px;
+}
+
+
+/* ITEM */
+
+.feature-item {
+    min-height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    margin-bottom: 10px;
+
+    padding: 10px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    box-shadow: 0 2px 7px rgba(0,0,0,0.12);
+
+    cursor: pointer;
+}
+
+
+/* ICON */
+
+.feature-icon {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 8px;
+
+    font-size: 22px;
+
+    margin-right: 10px;
+}
+
+.feature-icon.blue {
+    background: #e3f3ff;
+}
+
+.feature-icon.purple {
+    background: #eee5ff;
+}
+
+.feature-icon.orange {
+    background: #fff0d5;
+}
+
+
+/* TEKS ITEM */
+
+.feature-item div:nth-child(2) {
+    flex: 1;
+}
+
+.feature-item h4 {
+    margin: 0 0 3px;
+
+    font-size: 11px;
+}
+
+.feature-item p {
+    margin: 0;
+
+    font-size: 9px;
+
+    line-height: 1.4;
+
+    color: #777;
+}
+
+.feature-item > span {
+    font-size: 25px;
+
+    color: #8aa0b5;
+}
+
+
+/* =========================
+   BOOK
+========================= */
+
+.book-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+
+    padding: 0 12px 20px;
+}
+
+.book-item {
+    cursor: pointer;
+}
+
+.book-item img {
+    width: 100%;
+
+    height: 145px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.book-item h4 {
+    margin: 5px 0 0;
+
+    font-size: 10px;
+}
+
+.book-item p {
+    margin: 2px 0;
+
+    font-size: 8px;
+
+    color: #999;
+}
+/* =========================
+   NOTIFICATION PAGE
+========================= */
+
+.notification-screen {
+    background: #f5f7fa;
+    overflow-y: auto;
+    color: #071326;
+}
+
+
+/* HEADER */
+
+.notification-header {
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 15px;
+
+    background: linear-gradient(
+        to bottom,
+        #4aaef5,
+        #2098ed
+    );
+
+    color: white;
+}
+
+.notification-header h2 {
+    flex: 1;
+
+    margin-left: 10px;
+
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.read-all-btn {
+    border: none;
+
+    background: rgba(255,255,255,0.2);
+
+    color: white;
+
+    padding: 7px 10px;
+
+    border-radius: 12px;
+
+    font-size: 9px;
+
+    cursor: pointer;
+}
+
+
+/* JUDUL */
+
+.notification-title {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 15px 8px;
+}
+
+.notification-title strong {
+    font-size: 10px;
+}
+
+.notification-title button {
+    border: none;
+
+    background: transparent;
+
+    color: #168ee5;
+
+    font-size: 9px;
+
+    cursor: pointer;
+}
+
+
+/* LIST */
+
+#notification-list {
+    padding: 0 10px 20px;
+}
+
+
+/* ITEM */
+
+.notification-item {
+    position: relative;
+
+    display: flex;
+    align-items: flex-start;
+
+    margin-bottom: 8px;
+    padding: 10px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+/* BELUM DIBACA */
+
+.notification-item.unread {
+    background: #ffffff;
+}
+
+.notification-item.unread::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    width: 3px;
+
+    background: #149fea;
+
+    border-radius: 12px 0 0 12px;
+}
+
+
+/* SUDAH DIBACA */
+
+.notification-item.read {
+    opacity: 0.7;
+}
+
+
+/* ICON */
+
+.notification-icon {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    margin-right: 9px;
+
+    font-size: 19px;
+}
+
+.notification-icon.blue {
+    background: #e5f4ff;
+}
+
+.notification-icon.green {
+    background: #e5fff1;
+}
+
+.notification-icon.purple {
+    background: #eee7ff;
+}
+
+.notification-icon.red {
+    background: #ffe8e8;
+}
+
+.notification-icon.yellow {
+    background: #fff4d7;
+}
+
+
+/* ISI */
+
+.notification-content {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.notification-content h4 {
+    margin: 0 0 3px;
+
+    font-size: 10px;
+
+    color: #172b3a;
+}
+
+.notification-content p {
+    margin: 0;
+
+    font-size: 8.5px;
+
+    line-height: 1.4;
+
+    color: #71808d;
+}
+
+
+/* WAKTU */
+
+.notification-time {
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 7.5px;
+
+    color: #999;
+}
+
+
+/* LABEL */
+
+.notification-label {
+    display: inline-block;
+
+    margin-top: 3px;
+
+    padding: 2px 5px;
+
+    border-radius: 4px;
+
+    background: #e8f5ff;
+
+    color: #168ee5;
+
+    font-size: 6.5px;
+
+    font-weight: bold;
+}
+
+
+/* TITIK BELUM DIBACA */
+
+.unread-dot {
+    width: 7px;
+    height: 7px;
+
+    flex-shrink: 0;
+
+    margin-top: 3px;
+
+    background: #168ee5;
+
+    border-radius: 50%;
+}
+
+
+/* NOTIFIKASI KOSONG */
+
+.empty-notification {
+    text-align: center;
+
+    padding: 70px 20px;
+
+    color: #8b98a5;
+}
+
+.empty-notification div {
+    font-size: 40px;
+
+    margin-bottom: 10px;
+}
+
+.empty-notification h3 {
+    margin: 0 0 5px;
+
+    color: #425466;
+
+    font-size: 14px;
+}
+
+.empty-notification p {
+    margin: 0;
+
+    font-size: 10px;
+}
+/* =========================
+   PROFILE PAGE
+========================= */
+
+#profile {
+    background-color: #f7fafc;
+    overflow-y: auto;
+}
+
+.profile-container {
+    padding: 16px;
+}
+
+/* Card Atas (Info User & Stats) */
+.profile-page-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    margin-bottom: 20px;
+}
+
+.profile-header-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 16px;
+    border-bottom: 1px dashed #eee;
+}
+
+.profile-avatar-large {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #09baf0;
+}
+
+.profile-avatar-large img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-details h3 {
+    font-size: 16px;
+    color: #111;
+    margin-bottom: 2px;
+}
+
+.profile-details p {
+    font-size: 11px;
+    color: #8aa0b5;
+}
+
+/* Row Statistik 3 Kolom */
+.profile-stats-row {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 16px;
+    text-align: center;
+}
+
+.p-stat strong {
+    display: block;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.p-stat strong.blue { color: #09baf0; }
+.p-stat strong.yellow { color: #ffb900; }
+.p-stat strong.green { color: #10b981; }
+
+.p-stat span {
+    font-size: 10px;
+    color: #8aa0b5;
+}
+
+/* Menu List Profil */
+.profile-menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.profile-menu-item {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    cursor: pointer;
+}
+
+.p-menu-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.p-menu-icon.blue { background: #e3f3ff; color: #09baf0; }
+.p-menu-icon.blue-light { background: #e8f5ff; color: #09baf0; }
+.p-menu-icon.blue-sky { background: #e0f2fe; color: #0284c7; }
+.p-menu-icon.blue-border { background: #e0f2fe; color: #0284c7; }
+.p-menu-icon.red-light { background: #ffe4e6; color: #ef4444; }
+
+.p-menu-text {
+    flex: 1;
+}
+
+.p-menu-text h4 {
+    font-size: 12px;
+    color: #111;
+    margin-bottom: 2px;
+}
+
+.p-menu-text p {
+    font-size: 9.5px;
+    color: #8aa0b5;
+}
+
+.p-arrow {
+    font-size: 18px;
+    color: #cbd5e1;
+}
+
+/* Item Keluar Akun */
+.profile-menu-item.logout {
+    border: 1px solid #ffe4e6;
+}
+
+.red-text {
+    color: #ef4444 !important;
+}
+/* =========================
+   TANYA AI CHAT PAGE
+========================= */
+
+#tanya-ai {
+    display: flex;
+    flex-direction: column;
+    background-color: #f7fafc;
+    height: 100vh; /* Memastikan chat memenuhi layar */
+}
+
+/* Header Chat */
+.chat-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background: #ffffff;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.chat-user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    margin-left: 10px;
+}
+
+.chat-avatar {
+    width: 38px;
+    height: 38px;
+    background: #e3f3ff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.chat-user-info h4 {
+    font-size: 14px;
+    margin: 0;
+    color: #111;
+}
+
+.status-online {
+    font-size: 10px;
+    color: #22c55e;
+    font-weight: bold;
+}
+
+.chat-settings {
+    font-size: 18px;
+    cursor: pointer;
+    color: #666;
+}
+
+/* Chat Body */
+.chat-body {
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* Gelembung Pesan User (Biru) */
+.chat-bubble.user {
+    align-self: flex-end;
+    background: #09baf0;
+    color: white;
+    padding: 12px 14px;
+    border-radius: 16px 16px 2px 16px;
+    max-width: 80%;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.chat-bubble.user .chat-time {
+    display: block;
+    text-align: right;
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 4px;
+}
+
+/* Gelembung Pesan Bot (Putih) */
+.chat-bubble-container.bot {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    max-width: 85%;
+}
+
+.bot-icon {
+    width: 28px;
+    height: 28px;
+    background: #e3f3ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.chat-bubble.bot {
+    background: #ffffff;
+    color: #333;
+    padding: 12px 14px;
+    border-radius: 16px 16px 16px 2px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.chat-bubble.bot h4 {
+    color: #09baf0;
+    margin-bottom: 6px;
+    font-size: 12px;
+}
+
+.chat-bubble.bot ol {
+    margin-left: 16px;
+    margin-top: 6px;
+}
+
+.chat-bubble.bot li {
+    margin-bottom: 6px;
+}
+
+.chat-bubble.bot .chat-time {
+    display: block;
+    font-size: 9px;
+    color: #aaa;
+    margin-top: 6px;
+}
+
+/* Input Bar Bawah */
+.chat-input-area {
+    display: flex;
+    padding: 10px 14px;
+    background: #ffffff;
+    gap: 8px;
+    border-top: 1px solid #eee;
+}
+
+.chat-input-area input {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 8px 14px;
+    font-size: 12px;
+    outline: none;
+}
+
+.send-btn {
+    background: #09baf0;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* =========================
+   BOTTOM NAV TRANSPARAN
+========================= */
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    max-width: 480px;
+    
+    /* Transparan dengan efek blur */
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    
+    /* Garis pembatas atas tipis */
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0 12px;
+    z-index: 1000;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #8aa0b5; 
+    cursor: pointer;
+    flex: 1;
+    transition: all 0.2s ease;
+}
+
+.nav-icon {
+    width: 22px;
+    height: 22px;
+    margin-bottom: 4px;
+}
+
+.nav-text {
+    font-size: 10px;
+    font-weight: 700;
+}
+
+/* Efek saat tombol Aktif (Dipilih) */
+.nav-item:hover, .nav-item.active {
+    color: #09baf0; 
+}
+
+.nav-item:hover .nav-icon, .nav-item.active .nav-icon {
+    stroke: #09baf0;
+}
+
+/* Beri padding bawah pada semua screen agar konten tidak tertutup menu */
+.screen {
+    padding-bottom: 80px; 
+}
+/* =========================
+   HALAMAN KURSUS SAYA
+========================= */
+#belajar-ai { background-color: #f7fafc; }
+.kursus-header-area { padding: 20px 16px 10px; background: white; border-bottom: 1px solid #f0f0f0; }
+.kursus-top-nav { display: flex; align-items: center; margin-bottom: 20px; }
+.kursus-top-nav h2 { font-size: 18px; font-weight: 800; color: #111; margin: 0; margin-left: 12px;}
+.kursus-search-box { display: flex; align-items: center; background: #f4f6f8; padding: 10px 14px; border-radius: 12px; margin-bottom: 16px; }
+.kursus-search-box input { border: none; outline: none; width: 100%; font-size: 11px; background: transparent; }
+.kursus-search-box .search-icon { color: #a0aab5; margin-right: 8px; }
+.kursus-filter-scroll { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 5px; }
+.kursus-filter-scroll::-webkit-scrollbar { display: none; }
+.filter-btn { padding: 8px 16px; border: 1px solid #f0f0f0; border-radius: 20px; background: white; color: #666; font-size: 11px; font-weight: 600; cursor: pointer; white-space: nowrap; }
+.filter-btn.active { background: #09baf0; color: white; border-color: #09baf0; }
+.kursus-list-container { padding: 16px; display: flex; flex-direction: column; gap: 12px; overflow-y: auto; }
+.kursus-card { background: white; border-radius: 16px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.03); }
+.kursus-card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; }
+.kursus-card-top h4 { font-size: 13px; font-weight: 800; color: #111; margin: 0; }
+.kursus-progress-text { font-size: 10px; font-weight: 700; color: #444; }
+.kursus-desc { font-size: 10px; color: #8aa0b5; margin: 0 0 12px 0; }
+.progress-bar-bg { height: 6px; background: #f0f4f8; border-radius: 4px; margin-bottom: 6px; overflow: hidden; }
+.progress-bar-fill { height: 100%; border-radius: 4px; }
+.progress-bar-fill.blue { background-color: #09baf0; }
+.progress-bar-fill.purple { background-color: #6366f1; }
+.progress-bar-fill.orange { background-color: #f59e0b; }
+.progress-bar-fill.green { background-color: #10b981; }
+.progress-status { font-size: 9px; color: #8aa0b5; margin: 0; }
+/* =========================
+   HALAMAN PENJADWALAN KURSUS (DETAIL KURSUS)
+========================= */
+#jadwal {
+    background-color: #f8fafc;
+    color: #0f172a;
+    font-family: 'Nunito', Arial, sans-serif;
+}
+
+#jadwal button,
+#jadwal select,
+#jadwal input {
+    font-family: inherit;
+}
+
+#jadwal button {
+    border: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#jadwal button:focus-visible,
+#jadwal select:focus-visible,
+#jadwal .jd-time-field:focus-within {
+    outline: 2px solid #0f172a;
+    outline-offset: 2px;
+}
+
+/* ---------- Header biru ---------- */
+#jadwal .jd-hero {
+    padding: 20px 16px 20px;
+    background: linear-gradient(180deg, #5bb2ff 0%, #4ba5f7 55%, #2e93eb 100%);
+    border-radius: 0 0 28px 28px;
+    box-shadow: 0 6px 18px rgba(46, 147, 235, 0.25);
+}
+
+#jadwal .jd-hero-inner {
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+#jadwal .jd-topbar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#jadwal .jd-back {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.22);
+    color: #fff;
+    border-radius: 50%;
+}
+
+#jadwal .jd-topbar h2 {
+    font-family: 'Fredoka', 'Nunito', Arial, sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    color: #fff;
+}
+
+/* ---------- Kartu kursus ---------- */
+#jadwal .jd-course-card {
+    margin-top: 18px;
+    padding: 16px 18px 15px;
+    background: #fff;
+    border-radius: 22px;
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
+}
+
+#jadwal .jd-course-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+#jadwal .jd-course-top h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.3;
+    color: #0f172a;
+}
+
+#jadwal .jd-count {
+    flex-shrink: 0;
+    padding: 6px 11px;
+    background: #f1f5f9;
+    color: #475569;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+#jadwal .jd-course-sub {
+    margin-top: 2px;
+    font-size: 13px;
+    color: #64748b;
+}
+
+#jadwal .jd-progress {
+    height: 8px;
+    margin: 12px 0 6px;
+    background: #f1f5f9;
+    border-radius: 99px;
+    overflow: hidden;
+}
+
+#jadwal .jd-progress span {
+    display: block;
+    height: 100%;
+    background: #1391f5;
+    border-radius: 99px;
+}
+
+#jadwal .jd-progress-label {
+    font-size: 11.5px;
+    color: #64748b;
+}
+
+/* ---------- Isi halaman ---------- */
+#jadwal .jd-body {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 16px 16px 24px;
+}
+
+#jadwal .jd-label {
+    margin: 0 8px 4px;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #64748b;
+}
+
+#jadwal .jd-desc {
+    margin: 0 8px;
+    font-size: 13px;
+    line-height: 1.55;
+    color: #334155;
+}
+
+#jadwal .jd-heading {
+    margin: 22px 2px 10px;
+    font-family: 'Fredoka', 'Nunito', Arial, sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+#jadwal .jd-card {
+    padding: 12px;
+    background: #fff;
+    border-radius: 22px;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+}
+
+/* ---------- Pilih hari ---------- */
+#jadwal .jd-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+#jadwal .jd-day {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    padding: 8px 0 7px;
+    background: #f1f5f9;
+    border-radius: 12px;
+    transition: background 0.15s, box-shadow 0.15s, transform 0.1s;
+}
+
+#jadwal .jd-day:active {
+    transform: scale(0.95);
+}
+
+#jadwal .jd-day-name {
+    font-size: clamp(8.5px, 2.5vw, 10.5px);
+    font-weight: 600;
+    color: #64748b;
+}
+
+#jadwal .jd-day-num {
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 1.2;
+    color: #0f172a;
+}
+
+#jadwal .jd-day.active {
+    background: #1391f5;
+    box-shadow: 0 4px 10px rgba(19, 145, 245, 0.3);
+}
+
+#jadwal .jd-day.active .jd-day-name {
+    color: rgba(255, 255, 255, 0.92);
+}
+
+#jadwal .jd-day.active .jd-day-num {
+    color: #fff;
+}
+
+/* ---------- Jam belajar ---------- */
+#jadwal .jd-time-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+#jadwal .jd-time-pill {
+    flex: 1;
+    min-width: 0;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0 6px 0 8px;
+    background: #f1f5f9;
+    border-radius: 14px;
+}
+
+#jadwal .jd-step {
+    width: 30px;
+    height: 100%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: #475569;
+    border-radius: 10px;
+}
+
+#jadwal .jd-step:active {
+    background: #e2e8f0;
+}
+
+#jadwal .jd-time-field {
+    position: relative;
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 6px;
+    font-size: 16px;
+    font-variant-numeric: tabular-nums;
+    color: #334155;
+    cursor: pointer;
+}
+
+#jadwal .jd-time-field.is-start {
+    justify-content: flex-end;
+}
+
+#jadwal .jd-time-field.is-end {
+    justify-content: flex-start;
+}
+
+/* input asli dibuat transparan supaya tampilan tetap "14:00" */
+#jadwal .jd-time-field input {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    opacity: 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#jadwal .jd-time-sep {
+    font-size: 16px;
+    color: #64748b;
+}
+
+/* ---------- Pengaturan jadwal ---------- */
+#jadwal .jd-field-label {
+    display: block;
+    margin: 2px 4px 8px;
+    font-size: 12.5px;
+    color: #334155;
+}
+
+#jadwal .jd-freq-row {
+    display: flex;
+    gap: 10px;
+}
+
+#jadwal .jd-select {
+    position: relative;
+    flex: 1;
+    min-width: 0;
+}
+
+#jadwal .jd-select select {
+    width: 100%;
+    height: 42px;
+    padding: 0 38px 0 14px;
+    background: #f1f5f9;
+    color: #334155;
+    border: none;
+    border-radius: 14px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+#jadwal .jd-select svg {
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    transform: translateY(-50%);
+    color: #334155;
+    pointer-events: none;
+}
+
+#jadwal .jd-change {
+    height: 42px;
+    padding: 0 16px;
+    background: #f1f5f9;
+    color: #334155;
+    border-radius: 14px;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: background 0.15s, transform 0.1s;
+}
+
+#jadwal .jd-change:hover {
+    background: #e2e8f0;
+}
+
+#jadwal .jd-change:active {
+    background: #e2e8f0;
+    transform: scale(0.97);
+}
+
+/* ---------- Tombol MULAI ---------- */
+#jadwal .jd-start {
+    display: block;
+    width: 100%;
+    height: 60px;
+    margin-top: 22px;
+    background: linear-gradient(100deg, #02bafe 0%, #1391f5 100%);
+    color: #fff;
+    border-radius: 999px;
+    font-family: Inter, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 4px rgba(0, 60, 140, 0.25);
+    box-shadow: 0 8px 20px rgba(19, 145, 245, 0.35);
+    transition: transform 0.12s, box-shadow 0.12s;
+}
+
+#jadwal .jd-start:active {
+    transform: scale(0.98);
+    box-shadow: 0 4px 12px rgba(19, 145, 245, 0.35);
+}
+
+/* ---------- Pesan singkat ---------- */
+#jadwal .jd-toast {
+    position: fixed;
+    left: 50%;
+    bottom: 28px;
+    z-index: 30;
+    max-width: calc(100vw - 32px);
+    padding: 11px 18px;
+    background: #0f172a;
+    color: #fff;
+    border-radius: 999px;
+    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.3);
+    font-size: 12.5px;
+    font-weight: 700;
+    text-align: center;
+    opacity: 0;
+    transform: translate(-50%, 12px);
+    pointer-events: none;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+#jadwal .jd-toast.show {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #jadwal * {
+        transition: none !important;
+    }
+}
+/* =========================
+   HALAMAN DETAIL KURSUS
+========================= */
+#detail-kursus { background-color: #f7fafc; }
+.dk-header { display: flex; align-items: center; padding: 20px 16px 10px; background: white; }
+.dk-header h2 { font-size: 16px; font-weight: 800; margin-left: 12px; color: #111; }
+.dk-content { padding: 16px; }
+
+/* Kartu Progres Biru */
+.dk-progress-card { background: #09baf0; border-radius: 16px; padding: 20px; display: flex; align-items: center; color: white; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(9, 186, 240, 0.3); }
+
+.dk-circle-progress {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    margin-right: 16px;
+    border-radius: 50%;
+
+    background: conic-gradient(
+        white 0 var(--progress, 0%),
+        rgba(255, 255, 255, 0.3) var(--progress, 0%) 100%
+    );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    font-weight: 800;
+    font-size: 14px;
+}
+
+.dk-circle-progress::before {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    border-radius: 50%;
+    background: #09baf0;
+}
+
+.dk-circle-progress span {
+    position: relative;
+    z-index: 1;
+}
+
+.dk-progress-text h3 { margin: 0 0 4px 0; font-size: 15px; font-weight: 800; }
+.dk-progress-text p { margin: 0; font-size: 10px; color: rgba(255,255,255,0.8); }
+
+/* Tabs */
+.dk-tabs { display: flex; background: #f0f4f8; border-radius: 20px; padding: 4px; margin-bottom: 20px; }
+.dk-tab { flex: 1; text-align: center; font-size: 11px; font-weight: 700; color: #8aa0b5; padding: 10px 0; border-radius: 16px; cursor: pointer; }
+.dk-tab.active { background: white; color: #09baf0; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+
+/* Daftar Bab */
+.dk-module-list { display: flex; flex-direction: column; gap: 12px; }
+.dk-module-card { background: white; border-radius: 16px; padding: 14px 16px; display: flex; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,0.03); cursor: pointer; border: 1px solid transparent; }
+.dk-module-card.active { border-color: #09baf0; }
+.dk-module-card.locked { opacity: 0.6; cursor: not-allowed; }
+
+/* Ikon Status */
+.dk-icon { width: 32px; height: 32px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 12px; margin-right: 14px; flex-shrink: 0; }
+.dk-icon.done { background: #e5fff1; color: #10b981; }
+.dk-icon.play { background: #e3f3ff; color: #09baf0; font-size: 10px; }
+.dk-icon.lock { background: #f0f4f8; color: #8aa0b5; }
+
+/* Info Teks */
+.dk-module-info { flex: 1; }
+.dk-module-info .bab { display: block; font-size: 9px; color: #8aa0b5; margin-bottom: 2px; }
+.dk-module-info h4 { margin: 0 0 2px 0; font-size: 12px; font-weight: 800; color: #111; }
+.dk-module-info .time { font-size: 9px; color: #aaa; }
+.dk-module-card.active .dk-module-info h4 { color: #09baf0; }
+
+.dk-arrow { font-size: 20px; color: #c0c8d0; }
+/* =========================
+   HALAMAN MATERI (BAB 3)
+========================= */
+#halaman-materi { 
+    background-color: #f7fafc; 
+    padding-bottom: 80px; /* Jaga jarak agar konten tidak tertutup tombol bawah */
+}
+.hm-header { display: flex; align-items: center; padding: 20px 16px 10px; background: white; }
+.hm-header h2 { font-size: 15px; font-weight: 800; margin-left: 12px; color: #111; }
+.hm-content { padding: 16px; }
+
+/* Thumbnail Video */
+.hm-video-box { 
+    width: 100%; height: 180px; 
+    background: #0a0a16; 
+    border-radius: 16px; 
+    display: flex; justify-content: center; align-items: center; 
+    margin-bottom: 20px; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+    position: relative; 
+}
+/* Membentuk ornamen glow biru melingkar di tengah video */
+.hm-video-box::before {
+    content: ""; position: absolute; width: 100%; height: 100%;
+    background: radial-gradient(circle, rgba(9,186,240,0.15) 0%, rgba(0,0,0,0) 60%);
+}
+.hm-play-btn { 
+    width: 45px; height: 45px; 
+    background: rgba(255,255,255,0.15); 
+    border: 2px solid rgba(255,255,255,0.4); 
+    border-radius: 50%; 
+    display: flex; justify-content: center; align-items: center; 
+    color: white; font-size: 18px; 
+    z-index: 2; padding-left: 4px; cursor: pointer; backdrop-filter: blur(4px);
+}
+
+/* Bagian Teks */
+.hm-title-section { margin-bottom: 20px; }
+.hm-title-section h3 { font-size: 18px; font-weight: 800; color: #111; margin: 0 0 4px 0; }
+.hm-title-section p { font-size: 11px; color: #8aa0b5; margin: 0; }
+
+.hm-text-section { margin-bottom: 20px; }
+.hm-text-section h4 { font-size: 12px; font-weight: 800; color: #111; margin: 0 0 8px 0; }
+.hm-text-section p { font-size: 10.5px; color: #556677; line-height: 1.6; margin: 0; }
+
+.hm-text-section ul { padding-left: 18px; margin: 0; }
+.hm-text-section li { font-size: 10.5px; color: #556677; line-height: 1.6; margin-bottom: 6px; }
+.hm-text-section li::marker { color: #09baf0; font-size: 14px; } /* Warna bullet biru */
+
+/* Tombol Melayang di Bawah */
+.hm-bottom-bar { 
+    position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); 
+    width: 100vw; max-width: 480px; 
+    padding: 16px; background: white; 
+    border-top: 1px solid #f0f0f0; 
+    display: flex; z-index: 10; 
+}
+.hm-btn-primary { 
+    flex: 1; background: #09baf0; color: white; 
+    border: none; padding: 14px; border-radius: 25px; 
+    font-size: 13px; font-weight: 800; cursor: pointer; 
+    box-shadow: 0 4px 10px rgba(9, 186, 240, 0.3); 
+}
+/* =========================
+   HALAMAN KUIS
+========================= */
+#halaman-kuis { 
+    background-color: #f7fafc; 
+    padding-bottom: 80px; /* Jaga jarak dari tombol bawah */
+}
+
+/* Header & Progress Text */
+.hk-header { 
+    display: flex; align-items: center; justify-content: space-between; 
+    padding: 20px 16px 15px; background: white; 
+}
+.hk-header h2 { font-size: 14px; font-weight: 800; color: #111; margin: 0; flex: 1; text-align: center; }
+.hk-progress-text { font-size: 10px; font-weight: 800; color: #09baf0; }
+
+/* Progress Bar Garis */
+.hk-progress-bar-container {
+    width: calc(100% - 32px); height: 6px; 
+    background: #f0f4f8; border-radius: 4px; 
+    margin: 0 auto 16px; overflow: hidden;
+}
+.hk-progress-bar-fill { height: 100%; background: #09baf0; border-radius: 4px; }
+
+.hk-content { padding: 0 16px; }
+
+/* Kartu Pertanyaan */
+.hk-question-card {
+    background: white; border-radius: 16px; padding: 20px; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03); margin-bottom: 24px;
+}
+.hk-question-label { 
+    display: block; font-size: 9px; font-weight: 800; 
+    color: #09baf0; margin-bottom: 10px; letter-spacing: 0.5px;
+}
+.hk-question-card h3 { 
+    font-size: 15px; font-weight: 800; color: #111; margin: 0; line-height: 1.5;
+}
+
+/* Pilihan Jawaban */
+.hk-options { display: flex; flex-direction: column; gap: 12px; }
+.hk-option { 
+    background: white; border: 1px solid #e2e8f0; border-radius: 12px; 
+    padding: 14px 16px; display: flex; align-items: center; 
+    cursor: pointer; transition: 0.2s;
+}
+.hk-option span { font-size: 12px; font-weight: 700; color: #333; }
+
+/* Tombol Radio (Bulatan Pilihan) */
+.hk-radio { 
+    width: 18px; height: 18px; border: 2px solid #cbd5e1; 
+    border-radius: 50%; margin-right: 12px; 
+    display: flex; justify-content: center; align-items: center; flex-shrink: 0;
+}
+
+/* Tampilan Saat Pilihan Diklik (Aktif) */
+.hk-option.active { 
+    background: #e6f6fd; border-color: #09baf0; 
+}
+.hk-option.active .hk-radio { border-color: #09baf0; }
+.hk-option.active .hk-radio-inner { 
+    width: 10px; height: 10px; background: #09baf0; border-radius: 50%; 
+}
+
+/* Tombol Melayang di Bawah */
+.hk-bottom-bar { 
+    position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); 
+    width: 100vw; max-width: 480px; 
+    padding: 16px; background: white; 
+    border-top: 1px solid #f0f0f0; 
+    display: flex; z-index: 10; 
+}
+.hk-btn-primary { 
+    flex: 1; background: #09baf0; color: white; 
+    border: none; padding: 14px; border-radius: 25px; 
+    font-size: 13px; font-weight: 800; cursor: pointer; 
+    box-shadow: 0 4px 10px rgba(9, 186, 240, 0.3); 
+}
+
+/* =========================
+   PENGATURAN AKUN
+========================= */
+.account-settings-screen {
+    background: #f7fafc;
+    overflow-y: auto;
+    padding-bottom: 24px;
+}
+.account-settings-container {
+    display: grid;
+    gap: 16px;
+    padding: 16px;
+    max-width: 760px;
+    margin: 0 auto;
+}
+.account-settings-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.04);
+}
+.account-settings-card h3 {
+    color: #172033;
+    font-size: 16px;
+    margin: 0 0 6px;
+}
+.settings-description {
+    color: #8292a6;
+    font-size: 12px;
+    line-height: 1.5;
+    margin: 0 0 18px;
+}
+.account-settings-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.account-settings-card label {
+    color: #334155;
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 6px;
+}
+.account-settings-card input {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #dbe4ee;
+    border-radius: 10px;
+    padding: 12px;
+    color: #172033;
+    background: #fff;
+    font: inherit;
+    font-size: 13px;
+    outline: none;
+}
+.account-settings-card input:focus {
+    border-color: #09baf0;
+    box-shadow: 0 0 0 3px rgba(9,186,240,.12);
+}
+.account-settings-card input:disabled {
+    background: #f1f5f9;
+    color: #7c8b9d;
+    cursor: not-allowed;
+}
+.settings-hint {
+    color: #8292a6;
+    font-size: 11px;
+    margin: 0 0 6px;
+}
+.settings-primary-button {
+    border: 0;
+    border-radius: 10px;
+    background: #09baf0;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 12px 16px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.settings-primary-button:disabled {
+    opacity: .65;
+    cursor: wait;
+}
+.settings-message {
+    min-height: 16px;
+    margin: 10px 0 0;
+    color: #087f5b;
+    font-size: 12px;
+    line-height: 1.5;
+}
+@media (min-width: 700px) {
+    .account-settings-container { grid-template-columns: 1fr 1fr; align-items: start; }
+}
+
+
+/* ===== EduMath dashboard redesign (visual-only overrides) ===== */
+body:has(.redesign-home:not(.hidden)){overflow:auto;background:#f5f9ff;color:#17345f;font-family:'Nunito',Arial,sans-serif}
+.redesign-home{width:100%;min-height:100vh;height:auto;background:#f6f9ff;color:#17345f;overflow:visible}
+.rd-header{min-height:86px;padding:14px clamp(18px,3.5vw,56px);display:flex;align-items:center;gap:28px;background:#fff;border-bottom:1px solid #eaf0fa;position:relative;z-index:2}
+.rd-brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#12376e;font-size:clamp(23px,2.2vw,34px);font-weight:900;white-space:nowrap}.rd-brand img{width:54px;height:54px;object-fit:contain}.rd-brand>span>span{color:#2589ed}
+.rd-search{height:52px;display:flex;align-items:center;gap:12px;padding:0 20px;border-radius:28px;background:#edf4ff;flex:1;max-width:560px;color:#53739f}.rd-search span{font-size:28px}.rd-search input{border:0;outline:0;background:transparent;width:100%;font:600 15px inherit;color:#17345f}.rd-user-tools{display:flex;align-items:center;gap:15px;margin-left:auto}.rd-icon-button{width:46px;height:46px;border:0;border-radius:14px;background:#edf4ff;color:#1c5fae;font-size:26px;cursor:pointer;position:relative}.rd-icon-button i{position:absolute;right:8px;top:8px;width:9px;height:9px;background:#f04e79;border-radius:50%}.rd-user{display:flex;align-items:center;gap:12px;border:0;background:transparent;text-align:left;cursor:pointer;color:#17345f}.rd-user img{width:48px;height:48px;border-radius:50%;object-fit:cover;background:#e1efff}.rd-user span{display:grid;gap:3px}.rd-user strong{font-size:15px}.rd-user small{font-size:13px;color:#7085a7}.rd-user b{font-size:22px;margin-left:4px}.rd-content{max-width:1600px;margin:auto;padding:25px clamp(18px,3.4vw,54px) 18px}.rd-hero{min-height:285px;border-radius:18px;overflow:hidden;position:relative;display:flex;align-items:center;padding:34px clamp(25px,3.5vw,52px);background:linear-gradient(115deg,#1688ef,#42a5ff);color:white;box-shadow:0 12px 28px #2d8ae51c}.rd-hero-copy{position:relative;z-index:1;max-width:660px}.rd-eyebrow{font-size:14px;letter-spacing:.06em;font-weight:900;color:#5b91dd;margin-bottom:6px}.rd-hero .rd-eyebrow{color:#dceeff}.rd-hero h1{font-size:clamp(26px,3vw,42px);line-height:1.2;margin:8px 0 14px;font-weight:900}.rd-hero h2{font-size:clamp(18px,1.8vw,26px);margin-bottom:8px}.rd-hero-copy>p:not(.rd-eyebrow){font-size:17px;color:#eef7ff}.rd-primary{margin-top:24px;border:0;border-radius:28px;background:#fff;color:#187ce0;font-weight:900;font-size:16px;padding:15px 25px;cursor:pointer}.rd-primary span{margin-left:18px;font-size:20px}.rd-hero-art{position:absolute;right:4%;top:0;width:38%;height:100%;display:flex;align-items:flex-end;justify-content:center}.rd-mascot{font-size:clamp(90px,12vw,155px);filter:drop-shadow(0 10px 3px #0759a52c);z-index:1}.rd-equation{position:absolute;top:22%;left:2%;font-size:clamp(20px,2.4vw,35px);font-style:italic;transform:rotate(-12deg);color:#d8edff}.rd-book{position:absolute;bottom:20px;left:7%;font-size:45px}.rd-bulb{position:absolute;top:13%;right:9%;font-size:42px}.rd-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:22px 0 30px}.rd-stat{display:flex;align-items:center;gap:20px;padding:20px 24px;border-radius:16px;min-height:122px}.rd-stat-green{background:#e3f8f3}.rd-stat-purple{background:#f1eaff}.rd-stat-blue{background:#e7f2ff}.rd-stat-icon{width:70px;height:70px;border-radius:50%;display:grid;place-items:center;background:#ffffff8a;font-size:34px;flex-shrink:0}.rd-stat strong{font-size:29px;line-height:1.1;display:block;color:#15396d}.rd-stat p{margin:5px 0 10px;color:#7186a9;font-size:14px}.rd-stat-green strong{color:#159b83}.rd-stat-purple strong{color:#7a42e8}.rd-stat-blue strong{color:#167ee6}.rd-progress{height:7px;border-radius:10px;background:#ffffffb5;min-width:90px;overflow:hidden}.rd-progress i{height:100%;display:block;border-radius:10px;background:#18a98c}.rd-stat-purple .rd-progress i{background:#8246ed}.rd-stat-blue .rd-progress i{background:#2188ef}.rd-section-heading{display:flex;align-items:end;justify-content:space-between;margin:0 4px 15px}.rd-section-heading h2{font-size:clamp(24px,2.3vw,33px);font-weight:900}.rd-section-heading button{border:0;background:transparent;color:#167ce1;font-size:15px;font-weight:900;cursor:pointer;padding:10px}.rd-section-heading button span{font-size:20px;margin-left:8px}.rd-categories{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.rd-category{min-width:0;min-height:136px;display:flex;align-items:center;gap:16px;text-align:left;border:1px solid #e8effa;border-radius:14px;padding:18px 20px;cursor:pointer;color:#17345f;transition:transform .18s,box-shadow .18s}.rd-category:hover{transform:translateY(-3px);box-shadow:0 8px 22px #214f8318}.rd-pink{background:#fff0f6}.rd-blue{background:#eaf4ff}.rd-purple{background:#f2edff}.rd-mint{background:#e7faf4}.rd-yellow{background:#fff6e4}.rd-category-icon{width:70px;height:70px;flex-shrink:0;border-radius:50%;display:grid;place-items:center;background:#ffffffa8;font-size:35px}.rd-category-copy{display:grid;gap:7px;flex:1}.rd-category-copy strong{font-size:16px;font-weight:900}.rd-category-copy small{font-size:13px;line-height:1.55;color:#7185a5}.rd-arrow{width:38px;height:38px;border-radius:50%;background:#ffffff9c;display:grid;place-items:center;font-size:23px;flex-shrink:0}.rd-footer{display:flex;justify-content:space-between;gap:15px;margin-top:30px;padding:0 2px 10px;color:#7185a5;font-size:13px}.rd-footer em{font-style:italic}
+@media(max-width:900px){.rd-header{gap:12px;flex-wrap:wrap}.rd-search{order:3;max-width:none;flex-basis:100%}.rd-user small,.rd-user b{display:none}.rd-hero-art{right:0;width:35%;opacity:.65}.rd-stats{gap:10px}.rd-stat{padding:15px;gap:12px}.rd-stat-icon{width:48px;height:48px;font-size:25px}.rd-categories{grid-template-columns:repeat(2,minmax(0,1fr))}.rd-category{padding:15px;gap:12px}.rd-category-icon{width:52px;height:52px;font-size:27px}}
+@media(max-width:560px){.rd-header{padding:12px 15px}.rd-brand img{width:40px;height:40px}.rd-brand{font-size:23px}.rd-user img{width:38px;height:38px}.rd-user strong{font-size:12px}.rd-user-tools{gap:7px}.rd-icon-button{width:38px;height:38px}.rd-content{padding:16px 13px}.rd-hero{min-height:300px;padding:24px 20px;align-items:flex-start}.rd-hero-copy{max-width:100%}.rd-hero h1{font-size:27px}.rd-hero-copy>p:not(.rd-eyebrow){max-width:75%;font-size:14px}.rd-hero-art{width:45%;height:48%;top:auto;bottom:0;opacity:.55}.rd-mascot{font-size:90px}.rd-stats{grid-template-columns:1fr;gap:10px;margin:14px 0 24px}.rd-stat{min-height:88px;padding:13px 16px}.rd-stat-icon{width:54px;height:54px}.rd-stat strong{font-size:24px}.rd-progress{max-width:220px}.rd-section-heading{align-items:center}.rd-section-heading h2{font-size:25px}.rd-section-heading button{font-size:12px}.rd-categories{grid-template-columns:1fr}.rd-category{min-height:105px}.rd-footer{font-size:11px;flex-wrap:wrap}}
+
+
+/* Belajar dengan AI: pemilihan kelas dan semester */
+.ba-header{display:flex;align-items:center;gap:12px;padding:18px 22px;background:linear-gradient(120deg,#2699f2,#28b6e8);color:#fff;border-radius:0 0 18px 18px}
+.ba-header .back-button{flex:0 0 34px;width:34px;height:34px;display:grid;place-items:center;border-radius:50%;background:#ffffff35;color:#fff;font-size:28px;cursor:pointer}
+.ba-header h2{margin:0;font-size:22px;font-weight:800}.ba-header p{margin:5px 0 0;font-size:13px;color:#eefaff}
+.ba-content{padding:22px;max-width:1200px;margin:0 auto}.ba-section-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 14px}.ba-section-heading h3{margin:4px 0 0;font-size:20px;color:#15345e}.ba-section-heading h3 span{font-weight:500;color:#6d829d}.ba-eyebrow{font-size:10px;letter-spacing:1.2px;font-weight:800;color:#168fdf}.ba-active-note{font-size:12px;font-weight:700;color:#07895d;background:#e1f8ef;padding:8px 12px;border-radius:20px}
+.ba-class-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.ba-class-card{position:relative;min-height:105px;border:1px solid #e5edf5;border-radius:16px;background:#fff;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:4px;padding:14px 16px;text-align:left;box-shadow:0 3px 12px #19395c0a;color:#17345d}.ba-class-number{width:30px;height:30px;border-radius:10px;display:grid;place-items:center;background:#eef5ff;color:#267fe0;font-weight:800}.ba-class-card strong{font-size:14px}.ba-class-card small{font-size:11px;color:#8191a7}.ba-class-card.is-active{border:2px solid #18a9e7;background:linear-gradient(135deg,#f0fbff,#fff);box-shadow:0 5px 16px #159fe81c}.ba-class-card.is-active .ba-class-number{background:#159fe8;color:#fff}.ba-class-card.is-locked{background:#f7f9fc;color:#9aa8b8;cursor:not-allowed;box-shadow:none}.ba-class-card.is-locked .ba-class-number{background:#e9edf2;color:#8795a5}.ba-lock,.ba-check{position:absolute;right:14px;top:14px;font-size:13px}.ba-check{color:#0b9b6d;font-weight:900}.ba-semester-heading{margin-top:28px}.ba-semester-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.ba-semester-card{display:flex;align-items:center;gap:14px;text-align:left;padding:18px;border:1px solid #e8eef5;border-radius:16px;background:#fff;box-shadow:0 4px 14px #17395b0b;cursor:pointer;color:#17345d;transition:transform .15s,box-shadow .15s}.ba-semester-card:hover{transform:translateY(-2px);box-shadow:0 8px 22px #17395b15}.ba-semester-icon{width:54px;height:54px;flex:0 0 54px;border-radius:15px;display:grid;place-items:center;font-size:26px}.ba-blue{background:#e6f5ff}.ba-purple{background:#f0eaff}.ba-semester-copy{display:flex;flex-direction:column;gap:5px}.ba-semester-copy strong{font-size:15px}.ba-semester-copy small{font-size:12px;color:#8191a7}.ba-semester-tag{font-size:12px;font-weight:700;color:#138fd2;margin-top:3px}.ba-note{margin:16px 0 0;color:#8191a7;font-size:12px;line-height:1.6}
+@media(max-width:650px){.ba-content{padding:16px}.ba-class-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.ba-class-card{min-height:100px;padding:12px}.ba-semester-grid{grid-template-columns:1fr}.ba-header{padding:15px}.ba-header h2{font-size:19px}}
+
+/* =====================================
+   EDUBOT: POSISI CHAT DAN MENU PENGATURAN
+   ===================================== */
+
+#tanya-ai {
+    position: relative;
+}
+
+/* Pesan pengguna berada di sisi kanan */
+#edubot-messages .chat-bubble-container.user {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-left: auto;
+}
+
+/* Batasi lebar gelembung agar enak dibaca */
+#edubot-messages .chat-bubble.user {
+    align-self: auto;
+    margin-left: auto;
+    width: fit-content;
+    max-width: 82%;
+    overflow-wrap: anywhere;
+}
+
+/* Tombol pengaturan di header */
+.chat-settings {
+    border: 0;
+    background: transparent;
+    border-radius: 50%;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.chat-settings:hover {
+    background: #eef7fc;
+}
+
+/* Menu yang terbuka dari ikon pengaturan */
+.edubot-settings-menu {
+    position: absolute;
+    top: 58px;
+    right: 12px;
+    z-index: 1005;
+    width: min(240px, calc(100% - 24px));
+    padding: 8px;
+    background: #ffffff;
+    border: 1px solid #e5edf3;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
+    flex-direction: column;
+    gap: 4px;
+}
+
+.edubot-settings-menu:not(.hidden) {
+    display: flex;
+}
+
+.edubot-settings-menu button {
+    width: 100%;
+    border: 0;
+    background: transparent;
+    border-radius: 9px;
+    padding: 12px;
+    text-align: left;
+    font: inherit;
+    font-size: 13px;
+    color: #263746;
+    cursor: pointer;
+}
+
+.edubot-settings-menu button:hover {
+    background: #f0f9ff;
+}
+
+.edubot-settings-menu button:first-child {
+    color: #dc2626;
+}
+
+/* =========================================
+   EDUMATH: DESAIN LENCANA PENCAPAIAN
+   ========================================= */
+
+#achievements {
+    padding-bottom: 28px;
+}
+
+.achievement-overview {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 18px 0 24px;
+    padding: 18px;
+    background: linear-gradient(135deg, #e6f8ff, #f1ecff);
+    border: 1px solid #dceefa;
+    border-radius: 18px;
+}
+
+.achievement-overview-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    flex-shrink: 0;
+    background: #ffffff;
+    border-radius: 16px;
+    font-size: 30px;
+}
+
+.achievement-overview strong {
+    color: #172b4d;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.achievement-overview p {
+    margin: 3px 0 0;
+    color: #64748b;
+    font-size: 12px;
+}
+
+.achievement-category {
+    margin: 24px 0;
+}
+
+.achievement-category-header {
+    margin-bottom: 12px;
+}
+
+.achievement-category-header h3 {
+    margin: 0 0 5px;
+    color: #19324d;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.achievement-category-header p {
+    margin: 0;
+    color: #718096;
+    font-size: 12px;
+}
+
+.achievement-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.achievement-badge {
+    min-width: 0;
+    padding: 15px 10px;
+    border: 1px solid #e3eaf1;
+    border-radius: 16px;
+    background: #ffffff;
+    text-align: center;
+    overflow-wrap: anywhere;
+    transition: transform 0.2s ease;
+}
+
+.achievement-badge.unlocked {
+    background: linear-gradient(160deg, #fffdf3, #ffffff);
+    border-color: #f1d88a;
+}
+
+.achievement-badge.locked {
+    background: #f7f9fc;
+    border-color: #e7ecf2;
+}
+
+.achievement-badge-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 62px;
+    height: 62px;
+    margin: 0 auto 12px;
+    border-radius: 50%;
+    background: #eef6ff;
+    font-size: 29px;
+}
+
+.achievement-badge.unlocked .achievement-badge-icon {
+    background: #fff0c2;
+}
+
+.achievement-badge.locked .achievement-badge-icon {
+    background: #e9edf3;
+}
+
+.achievement-badge h4 {
+    margin: 0 0 6px;
+    color: #23364d;
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+.achievement-target {
+    min-height: 30px;
+    margin: 0 0 12px;
+    color: #718096;
+    font-size: 11px;
+}
+
+.achievement-progress-track {
+    width: 100%;
+    height: 6px;
+    margin: 8px 0;
+    overflow: hidden;
+    background: #e8edf3;
+    border-radius: 20px;
+}
+
+.achievement-progress-bar {
+    height: 100%;
+    background: #08b8e8;
+    border-radius: inherit;
+    transition: width 0.35s ease;
+}
+
+.achievement-badge.unlocked .achievement-progress-bar {
+    background: #22a06b;
+}
+
+.achievement-status {
+    display: block;
+    margin-top: 8px;
+    color: #78869a;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.achievement-badge.unlocked .achievement-status {
+    color: #198754;
+    font-weight: 700;
+}
+
+.achievement-loading,
+.achievement-error {
+    padding: 18px;
+    color: #64748b;
+    font-size: 13px;
+    text-align: center;
+}
+
+@media (max-width: 350px) {
+    .achievement-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tombol lencana di dalam kartu dashboard */
+.rd-badge-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.rd-achievement-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 12px;
+    padding: 9px 12px;
+    border: 0;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #1676d2;
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.06);
+    transition: background 0.2s, transform 0.2s;
+}
+
+.rd-achievement-button:hover {
+    background: #f0f7ff;
+    transform: translateY(-1px);
+}
+
+.rd-achievement-button:focus-visible {
+    outline: 2px solid #1676d2;
+    outline-offset: 3px;
+}
+
+.rd-streak-history {
+    width: 100%;
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.rd-streak-history > strong {
+    color: #fff;
+    font-size: 14px;
+}
+
+#streak-total-days {
+    margin: 5px 0 12px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 12px;
+}
+
+.rd-streak-calendar {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 6px;
+}
+
+.rd-streak-day {
+    display: flex;
+    aspect-ratio: 1;
+    min-width: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    background: rgba(255, 255, 255, 0.14);
+    color: #fff;
+    font-size: 10px;
+}
+
+.rd-streak-day.is-logged {
+    background: #b9f6ca;
+    color: #215d3a;
+}
+
+.rd-streak-day.is-today {
+    outline: 2px solid #fff;
+    outline-offset: 1px;
+}
+
+.rd-streak-day-number {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.rd-streak-day-label {
+    margin-top: 2px;
+    font-size: 9px;
+}
