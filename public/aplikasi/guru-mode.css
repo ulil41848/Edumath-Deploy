@@ -1,0 +1,76 @@
+:root {
+    color-scheme: light;
+    font-family: 'Nunito', Arial, sans-serif;
+    color: #17345f;
+    background: #f5f9ff;
+    font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+
+body { margin: 0; min-width: 320px; }
+
+.page-header {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 10px clamp(18px, 5vw, 64px);
+    background: #fff;
+    box-shadow: 0 2px 14px #17345f12;
+}
+
+.brand { display: inline-flex; align-items: center; gap: 10px; color: #17345f; text-decoration: none; font-size: 21px; font-weight: 900; }
+.brand img { width: 42px; height: 42px; object-fit: contain; }
+.brand span span { color: #1688ef; }
+.home-link, .text-button { color: #176fbe; font-weight: 800; }
+.home-link { text-decoration: none; }
+.page-content { width: min(100% - 32px, 900px); margin: 26px auto 60px; }
+.hero { padding: clamp(22px, 5vw, 42px); border-radius: 22px; background: linear-gradient(120deg, #1688ef, #54b4ff); color: #fff; box-shadow: 0 14px 30px #147be52b; }
+.hero .eyebrow { color: #e4f3ff; }
+.hero h1 { margin: 8px 0 10px; font-size: clamp(28px, 5vw, 42px); line-height: 1.16; }
+.hero p:last-child { max-width: 650px; margin-bottom: 0; line-height: 1.65; }
+.eyebrow { margin: 0; color: #1976d2; font-size: 12px; font-weight: 900; letter-spacing: .08em; }
+.privacy-note { margin: 16px 0; padding: 13px 16px; border-left: 4px solid #efb537; border-radius: 10px; background: #fff8e8; color: #6e571e; font-size: 13px; line-height: 1.6; }
+.status { min-height: 24px; margin: 12px 0; color: #735417; font-weight: 800; }
+.panel { margin: 16px 0; padding: clamp(18px, 4vw, 28px); border: 1px solid #e0eaf7; border-radius: 18px; background: #fff; box-shadow: 0 8px 24px #28588b12; }
+.panel h2 { margin: 0 0 16px; }
+.form-grid, .answer-form { display: grid; gap: 10px; }
+label { font-weight: 900; }
+select, textarea { width: 100%; padding: 12px 14px; border: 1px solid #cbd9eb; border-radius: 12px; background: #fbfdff; color: #17345f; font: inherit; }
+textarea { resize: vertical; line-height: 1.6; }
+.objective { margin: 4px 0 8px; color: #607897; line-height: 1.6; }
+.button { min-height: 44px; padding: 10px 16px; border: 0; border-radius: 12px; font: inherit; font-size: 15px; font-weight: 800; cursor: pointer; }
+.primary { background: #1976d2; color: #fff; }
+.secondary { background: #eaf3ff; color: #175da6; }
+.button:disabled { cursor: wait; opacity: .6; }
+.session-heading, .history-heading, .button-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.session-heading h2 { margin: 4px 0 0; }
+.progress { padding: 7px 11px; border-radius: 20px; background: #edf6ff; color: #175da6; font-weight: 900; }
+.question-card { margin: 18px 0; padding: 17px; border-radius: 14px; background: #edf4ff; line-height: 1.65; }
+.question-card strong { display: block; margin-bottom: 4px; color: #176fbe; }
+.hint-box { margin: 12px 0; padding: 14px; border-radius: 12px; background: #fff6df; line-height: 1.6; }
+.turn-list { display: grid; gap: 12px; margin-top: 20px; }
+.turn { padding: 14px; border: 1px solid #e3ebf6; border-radius: 12px; line-height: 1.6; overflow-wrap: anywhere; }
+.turn p { margin: 5px 0; white-space: pre-wrap; }
+.turn small { color: #607897; }
+.result-note, .muted { color: #607897; line-height: 1.6; }
+.concept-list { display: grid; gap: 8px; padding-left: 21px; line-height: 1.55; }
+.concept-hit { color: #19734f; }
+.concept-missing { color: #785d1c; }
+.history-heading h2 { margin: 0; }
+.text-button { border: 0; background: transparent; font: inherit; cursor: pointer; }
+.history-list { display: grid; gap: 8px; padding: 0; list-style: none; }
+.history-list button { width: 100%; padding: 12px; border: 1px solid #e0eaf7; border-radius: 10px; background: #fff; color: #17345f; text-align: left; font: inherit; cursor: pointer; }
+.storage-warning { padding: 12px; border-radius: 10px; background: #fff1ed; color: #973f24; }
+[hidden] { display: none !important; }
+
+@media (max-width: 600px) {
+    .page-header { min-height: 60px; padding-inline: 16px; }
+    .brand { font-size: 18px; }
+    .brand img { width: 36px; height: 36px; }
+    .home-link { font-size: 14px; }
+    .page-content { width: min(100% - 22px, 900px); margin-top: 14px; }
+    .button-row .button { flex: 1 1 100%; }
+}

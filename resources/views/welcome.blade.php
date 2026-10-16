@@ -8,6 +8,7 @@
     <title>EduMath</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/guru-mode.css">
 </head>
 
 <body>
@@ -422,72 +423,75 @@
     </div>
 
     <div class="feature-description">
-        Mengajari AI dari materi yang sudah kamu
-        pelajari sebelumnya.
+        Jadilah Guru Cilik dan ajari murid AI memahami matematika dengan bahasamu sendiri!
     </div>
 
-    <h3>Kategori Belajar</h3>
+    <div class="guru-mode-shell" data-session-endpoint="{{ url('/guru-sessions') }}">
+        <p class="guru-mode-note">Jawabanmu disimpan di akunmu agar kamu dapat melihat riwayatnya. Jika AI eksternal dikonfigurasi, jawaban dan konteks materi akan dikirim ke penyedia tersebut untuk dinilai. Jangan tulis nama lengkap atau informasi pribadi.</p>
+        <p class="guru-mode-status" id="guru-mode-status" role="status" aria-live="polite"></p>
 
-    <div class="feature-list">
-
-        <div class="feature-item">
-
-            <div class="feature-icon blue">
-                🤖
-            </div>
-
-            <div>
-                <h4>Sesi penjelasan</h4>
-                <p>
-                    Jadikan AI menjadi murid yang
-                    kamu ajari.
-                </p>
-            </div>
-
-            <span>›</span>
-
+        <div class="guru-mode-setup" id="guru-mode-setup">
+            <h3>Pilih pelajaran</h3>
+            <form id="guru-mode-start-form">
+                <label for="guru-mode-grade">Kelas</label>
+                <select id="guru-mode-grade" name="grade" required>
+                    @foreach(range(1, 6) as $grade)
+                        <option value="{{ $grade }}">Kelas {{ $grade }} SD</option>
+                    @endforeach
+                </select>
+                <label for="guru-mode-material">Materi</label>
+                <select id="guru-mode-material" name="material_key" required></select>
+                <button class="guru-mode-button" type="submit">Mulai Mengajar</button>
+            </form>
         </div>
 
-
-        <div class="feature-item">
-
-            <div class="feature-icon purple">
-                👨‍🏫
+        <section id="guru-mode-session" class="guru-mode-card" hidden>
+            <div class="guru-mode-session-heading">
+                <div><p id="guru-mode-session-grade"></p><h3 id="guru-mode-session-title"></h3></div>
+                <span id="guru-mode-progress"></span>
             </div>
+            <div id="guru-mode-conversation" class="guru-mode-conversation" aria-live="polite"></div>
+            <div id="guru-mode-hint" class="guru-mode-hint" hidden></div>
+            <form id="guru-mode-answer-form">
+                <label for="guru-mode-answer">Jelaskan dengan kata-katamu sendiri</label>
+                <textarea id="guru-mode-answer" name="answer" maxlength="1200" rows="4" placeholder="Coba ajari aku langkah-langkahnya…" required></textarea>
+                <small id="guru-mode-character-count">0 / 1200</small>
+                <div class="guru-mode-actions">
+                    <button class="guru-mode-button guru-mode-secondary" id="guru-mode-hint-button" type="button">Minta Petunjuk</button>
+                    <button class="guru-mode-button" type="submit">Kirim Penjelasan</button>
+                    <button class="guru-mode-button guru-mode-secondary" id="guru-mode-complete-button" type="button" hidden>Selesaikan Sesi</button>
+                </div>
+            </form>
+            <p class="guru-mode-privacy">Kamu bisa menjawab dengan kalimat sederhana. Yang dinilai adalah pemahaman konsep, bukan ejaan.</p>
+        </section>
 
-            <div>
-                <h4>Materi pembelajaran</h4>
-                <p>
-                    Persiapkan materi yang akan
-                    kamu ajari. Untuk evaluasi dirimu.
-                </p>
+        <section id="guru-mode-result" class="guru-mode-card guru-mode-result" hidden>
+            <p class="guru-mode-eyebrow">RINGKASAN SESI</p>
+            <h3 id="guru-mode-result-level"></h3>
+            <p class="guru-mode-estimate-note" id="guru-mode-estimate-note"></p>
+            <h4>Penilaian tiap kriteria</h4>
+            <ul id="guru-mode-criteria" class="guru-mode-criteria"></ul>
+            <div class="guru-mode-result-grid">
+                <div><h4>Yang sudah dipahami</h4><ul id="guru-mode-understood"></ul></div>
+                <div><h4>Yang perlu dilatih</h4><ul id="guru-mode-misconceptions"></ul></div>
             </div>
-
-            <span>›</span>
-
-        </div>
-
-
-        <div class="feature-item">
-
-            <div class="feature-icon orange">
-                📅
+            <p><strong>Saran belajar:</strong> <span id="guru-mode-recommendation"></span></p>
+            <details><summary>Contoh penjelasan materi</summary><p id="guru-mode-example"></p></details>
+            <div id="guru-mode-study-note" class="guru-mode-study-note" hidden></div>
+            <div class="guru-mode-actions">
+                <button class="guru-mode-button" id="guru-mode-retry-button" type="button">Coba Lagi</button>
+                <button class="guru-mode-button guru-mode-secondary" id="guru-mode-study-button" type="button">Pelajari Materi</button>
             </div>
+        </section>
 
-            <div>
-                <h4>Jadwal mengajar</h4>
-                <p>
-                    Atur jadwal mengajarmu dan pantau
-                    progres kursus harianmu secara rapi.
-                </p>
-            </div>
-
-            <span>›</span>
-
-        </div>
-
+        <section class="guru-mode-history" aria-labelledby="guru-mode-history-title">
+            <h3 id="guru-mode-history-title">Riwayat belajarku</h3>
+            <ul id="guru-mode-history-list"></ul>
+            <p id="guru-mode-history-empty">Sesi yang sudah kamu mulai akan muncul di sini.</p>
+        </section>
     </div>
 
+    <script type="application/json" id="guru-mode-curriculum">@json(config('guru_mode.curriculum'))</script>
 </section>
 
 <!-- NOTIFIKASI PAGE -->
@@ -1103,6 +1107,7 @@
     </section>
 
     <script src="script.js"></script>
+    <script src="/guru-mode.js" defer></script>
 
     <script>
     // ===== EDUBOT: bot memberi soal (pilihan ganda / essai), siswa menjawab =====

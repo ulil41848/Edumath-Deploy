@@ -35,4 +35,10 @@ return [
         ],
     ],
 
+    'edumath_ai' => [
+        'base_url' => env('EDUMATH_AI_BASE_URL'),
+        'api_key' => env('EDUMATH_AI_API_KEY'),
+        'model' => env('EDUMATH_AI_MODEL'),
+    ],
+
 ];
