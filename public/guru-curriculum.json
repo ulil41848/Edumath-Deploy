@@ -1,0 +1,198 @@
+{
+    "1": [
+        {
+            "key": "addition-to-20",
+            "title": "Penjumlahan sampai 20",
+            "objective": "Menjelaskan penjumlahan sebagai menggabungkan dua kelompok benda sampai jumlah 20.",
+            "target_ideas": [
+                "menggabungkan kelompok",
+                "menghitung jumlah semua benda"
+            ],
+            "opening_question": "Aku punya 7 kelereng lalu mendapat 5 lagi. Bisa ajari aku cara mencari jumlah semuanya?",
+            "hints": [
+                "Bayangkan kelerengnya diletakkan dalam dua kelompok.",
+                "Coba mulai dari angka 7 lalu hitung maju lima langkah."
+            ],
+            "study_note": "Penjumlahan menggabungkan dua kelompok. Contoh: 7 benda ditambah 5 benda berarti menghitung semua benda dalam kedua kelompok."
+        },
+        {
+            "key": "subtraction-to-20",
+            "title": "Pengurangan sampai 20",
+            "objective": "Menjelaskan pengurangan sebagai mengambil sebagian benda atau mencari selisih.",
+            "target_ideas": [
+                "mengambil sebagian",
+                "menghitung sisa"
+            ],
+            "opening_question": "Ada 13 balon dan 4 balon terbang. Bagaimana cara mengetahui balon yang masih ada?",
+            "hints": [
+                "Mulai dari jumlah balon semula.",
+                "Kurangi dengan menghitung mundur empat langkah."
+            ],
+            "study_note": "Pengurangan dapat berarti mengambil sebagian. Jika 13 benda diambil 4, hitung benda yang tersisa: 13 − 4 = 9."
+        }
+    ],
+    "2": [
+        {
+            "key": "multiplication-groups",
+            "title": "Perkalian sebagai kelompok sama banyak",
+            "objective": "Menjelaskan perkalian sebagai penjumlahan berulang dari kelompok yang sama banyak.",
+            "target_ideas": [
+                "kelompok sama banyak",
+                "penjumlahan berulang"
+            ],
+            "opening_question": "Ada 3 piring dan setiap piring berisi 4 kue. Bagaimana kita menghitung semua kue?",
+            "hints": [
+                "Gambar tiga kelompok kue.",
+                "Tuliskan 4 + 4 + 4, lalu hitung jumlahnya."
+            ],
+            "study_note": "Perkalian dapat berarti penjumlahan berulang. Tiga kelompok yang masing-masing berisi 4 benda ditulis 3 × 4 = 4 + 4 + 4."
+        },
+        {
+            "key": "division-sharing",
+            "title": "Pembagian sebagai berbagi rata",
+            "objective": "Menjelaskan pembagian sebagai membagi benda menjadi kelompok dengan isi sama banyak.",
+            "target_ideas": [
+                "membagi rata",
+                "jumlah sama pada setiap kelompok"
+            ],
+            "opening_question": "Ada 12 biskuit yang dibagikan sama rata kepada 3 teman. Bagaimana mencari bagian setiap teman?",
+            "hints": [
+                "Bagikan satu demi satu kepada setiap teman.",
+                "Periksa apakah semua teman mendapat jumlah yang sama."
+            ],
+            "study_note": "Pembagian dapat berarti berbagi rata. Dua belas benda dibagi kepada tiga kelompok sama banyak menghasilkan 4 benda pada setiap kelompok."
+        }
+    ],
+    "3": [
+        {
+            "key": "simple-fractions",
+            "title": "Pecahan sederhana",
+            "objective": "Menjelaskan pembilang dan penyebut sebagai bagian yang diambil dan jumlah bagian sama besar.",
+            "target_ideas": [
+                "bagian sama besar",
+                "pembilang",
+                "penyebut"
+            ],
+            "opening_question": "Sebuah pizza dipotong menjadi 4 bagian sama besar dan 1 bagian dimakan. Apa arti pecahan 1\/4?",
+            "hints": [
+                "Pikirkan jumlah semua potongan yang sama besar.",
+                "Angka di atas menunjukkan bagian yang diambil."
+            ],
+            "study_note": "Pada pecahan 1\/4, penyebut 4 menunjukkan ada empat bagian sama besar. Pembilang 1 menunjukkan satu bagian yang diambil."
+        },
+        {
+            "key": "length-measurement",
+            "title": "Mengukur panjang",
+            "objective": "Memilih satuan panjang yang sesuai dan menjelaskan cara mengukur dari titik nol.",
+            "target_ideas": [
+                "satuan panjang",
+                "mulai dari angka nol",
+                "membandingkan panjang"
+            ],
+            "opening_question": "Bagaimana cara mengukur panjang pensil dengan penggaris agar hasilnya tepat?",
+            "hints": [
+                "Perhatikan posisi ujung awal benda.",
+                "Pastikan ujung benda yang lain sejajar dengan angka yang dibaca."
+            ],
+            "study_note": "Letakkan ujung awal benda tepat pada angka nol penggaris, lalu baca angka pada ujung lainnya. Panjang dapat dinyatakan dalam sentimeter atau milimeter."
+        }
+    ],
+    "4": [
+        {
+            "key": "factors-multiples",
+            "title": "Faktor dan kelipatan",
+            "objective": "Membedakan faktor sebagai pembagi habis dan kelipatan sebagai hasil perkalian berulang.",
+            "target_ideas": [
+                "faktor membagi habis",
+                "kelipatan berulang"
+            ],
+            "opening_question": "Bagaimana kamu tahu bahwa 3 adalah faktor dari 12, tetapi 5 bukan faktor dari 12?",
+            "hints": [
+                "Coba bagi 12 dengan masing-masing bilangan.",
+                "Faktor membagi habis tanpa sisa."
+            ],
+            "study_note": "Faktor dari suatu bilangan membaginya tanpa sisa. Kelipatan diperoleh dari mengalikan bilangan itu dengan 1, 2, 3, dan seterusnya."
+        },
+        {
+            "key": "area-perimeter",
+            "title": "Luas dan keliling persegi panjang",
+            "objective": "Membedakan luas sebagai banyaknya daerah persegi satuan dan keliling sebagai panjang sisi-sisi tepi.",
+            "target_ideas": [
+                "luas panjang kali lebar",
+                "keliling jumlah sisi"
+            ],
+            "opening_question": "Sebuah taman panjangnya 8 meter dan lebarnya 3 meter. Apa bedanya menghitung luas taman dan pagar di sekelilingnya?",
+            "hints": [
+                "Pikirkan ubin untuk menutup bagian dalam taman.",
+                "Pagar dipasang mengelilingi semua sisi."
+            ],
+            "study_note": "Luas persegi panjang = panjang × lebar. Keliling = 2 × (panjang + lebar). Luas mengukur daerah, sedangkan keliling mengukur tepi."
+        }
+    ],
+    "5": [
+        {
+            "key": "decimal-fractions",
+            "title": "Pecahan dan desimal",
+            "objective": "Menghubungkan pecahan berpenyebut 10 atau 100 dengan angka desimal.",
+            "target_ideas": [
+                "nilai tempat desimal",
+                "persepuluhan",
+                "perseratusan"
+            ],
+            "opening_question": "Mengapa 3\/10 dapat ditulis 0,3? Jelaskan arti angka 3 pada bilangan itu.",
+            "hints": [
+                "Penyebut 10 menunjukkan persepuluhan.",
+                "Lihat angka pertama setelah tanda koma."
+            ],
+            "study_note": "Pecahan 3\/10 berarti tiga persepuluhan dan ditulis 0,3. Angka pertama setelah koma menunjukkan persepuluhan."
+        },
+        {
+            "key": "percent",
+            "title": "Persentase",
+            "objective": "Memahami persen sebagai bagian per seratus dan menggunakannya pada situasi sederhana.",
+            "target_ideas": [
+                "persen berarti per seratus",
+                "mengubah persen ke pecahan atau desimal"
+            ],
+            "opening_question": "Diskon 25% berarti apa? Bagaimana menjelaskannya dengan gambar seratus kotak?",
+            "hints": [
+                "Bayangkan satu benda utuh dibagi menjadi seratus bagian.",
+                "Persen menunjukkan berapa bagian dari seratus."
+            ],
+            "study_note": "Persen berarti per seratus. Jadi 25% = 25\/100 = 0,25, atau 25 bagian dari 100 bagian yang sama."
+        }
+    ],
+    "6": [
+        {
+            "key": "ratio",
+            "title": "Perbandingan",
+            "objective": "Menjelaskan perbandingan dua jumlah dan mempertahankan nilai perbandingan yang setara.",
+            "target_ideas": [
+                "membandingkan dua jumlah",
+                "urutan nilai perbandingan",
+                "perbandingan setara"
+            ],
+            "opening_question": "Campuran minuman memakai 2 gelas sirup untuk 5 gelas air. Apa arti perbandingan 2 : 5?",
+            "hints": [
+                "Perhatikan jumlah sirup dan air secara terpisah.",
+                "Urutan dalam perbandingan mengikuti urutan benda yang disebut."
+            ],
+            "study_note": "Perbandingan 2 : 5 menyatakan setiap 2 bagian pertama berpasangan dengan 5 bagian kedua. Perbandingan setara dapat diperoleh dengan mengalikan kedua nilai dengan bilangan yang sama."
+        },
+        {
+            "key": "volume-cuboid",
+            "title": "Volume balok",
+            "objective": "Menjelaskan volume sebagai banyaknya kubus satuan yang memenuhi ruang balok.",
+            "target_ideas": [
+                "kubus satuan",
+                "panjang kali lebar kali tinggi"
+            ],
+            "opening_question": "Bagaimana menjelaskan banyaknya kubus satuan yang dapat mengisi sebuah kotak?",
+            "hints": [
+                "Hitung kubus pada satu lapisan terlebih dahulu.",
+                "Kalikan banyak kubus satu lapisan dengan jumlah lapisan."
+            ],
+            "study_note": "Volume balok = panjang × lebar × tinggi. Rumus itu menghitung banyak kubus satuan yang memenuhi ruang di dalam balok."
+        }
+    ]
+}

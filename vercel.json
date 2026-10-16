@@ -14,6 +14,10 @@
       "dest": "/index.html"
     },
     {
+      "src": "^/aplikasi/?$",
+      "dest": "/aplikasi/index.html"
+    },
+    {
       "src": "/build/(.*)",
       "dest": "/build/$1"
     },

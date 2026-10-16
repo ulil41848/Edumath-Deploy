@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#1688ef">
+    <title>Mode Sang Guru · EduMath</title>
+    <link rel="stylesheet" href="/aplikasi/guru-mode.css">
+</head>
+<body>
+    <header class="page-header">
+        <a class="brand" href="/" aria-label="Kembali ke EduMath">
+            <img src="/assets/logo.png" alt="">
+            <span>Edu<span>Math</span></span>
+        </a>
+        <a class="home-link" href="/">Kembali ke beranda</a>
+    </header>
+
+    <main class="page-content">
+        <section class="hero">
+            <p class="eyebrow">🏆 MODE SANG GURU</p>
+            <h1>Ayo ajari aku matematika!</h1>
+            <p>Pilih materi, jelaskan dengan bahasamu sendiri, lalu lihat frasa konsep yang berhasil kamu jelaskan.</p>
+        </section>
+
+        <section class="privacy-note" aria-label="Penyimpanan dan privasi">
+            Sesi dan jawaban disimpan hanya di browser dan perangkat ini. Pemeriksaan memakai pencocokan frasa sederhana, bukan AI atau penilaian semantik. Jangan masukkan informasi pribadi. Jika penyimpanan browser tidak tersedia, sesi tetap dapat dicoba tetapi tidak tersimpan setelah halaman ditutup.
+        </section>
+
+        <p class="status" id="guru-status" role="status" aria-live="polite"></p>
+
+        <section class="panel setup-panel" id="setup-panel">
+            <h2>Pilih pelajaran</h2>
+            <form id="start-form" class="form-grid">
+                <label for="grade-select">Kelas</label>
+                <select id="grade-select" required>
+                    <option value="1">Kelas 1 SD</option>
+                    <option value="2">Kelas 2 SD</option>
+                    <option value="3">Kelas 3 SD</option>
+                    <option value="4">Kelas 4 SD</option>
+                    <option value="5">Kelas 5 SD</option>
+                    <option value="6">Kelas 6 SD</option>
+                </select>
+                <label for="material-select">Materi</label>
+                <select id="material-select" required></select>
+                <p class="objective" id="material-objective"></p>
+                <button class="button primary" type="submit">Mulai sesi</button>
+            </form>
+        </section>
+
+        <section class="panel session-panel" id="session-panel" hidden>
+            <div class="session-heading">
+                <div>
+                    <p class="eyebrow" id="session-grade"></p>
+                    <h2 id="session-title"></h2>
+                </div>
+                <span class="progress" id="session-progress"></span>
+            </div>
+            <div class="question-card" id="current-question"></div>
+            <div class="hint-box" id="hint-box" hidden></div>
+            <form id="answer-form" class="answer-form">
+                <label for="student-answer">Jelaskan langkah atau idemu</label>
+                <textarea id="student-answer" rows="4" maxlength="1200" placeholder="Tulis penjelasanmu di sini…" required></textarea>
+                <small id="answer-count">0 / 1200</small>
+                <div class="button-row">
+                    <button class="button secondary" id="hint-button" type="button">Minta petunjuk</button>
+                    <button class="button primary" id="answer-button" type="submit">Kirim penjelasan</button>
+                    <button class="button secondary" id="finish-button" type="button" hidden>Lihat ringkasan</button>
+                </div>
+            </form>
+            <div class="turn-list" id="turn-list" aria-live="polite"></div>
+        </section>
+
+        <section class="panel result-panel" id="result-panel" hidden>
+            <p class="eyebrow">RINGKASAN SESI</p>
+            <h2 id="result-level"></h2>
+            <p id="result-note" class="result-note"></p>
+            <h3>Konsep dari materi</h3>
+            <ul id="concept-list" class="concept-list"></ul>
+            <p id="result-recommendation"></p>
+            <button class="button primary" id="new-session-button" type="button">Pilih materi lain</button>
+        </section>
+
+        <section class="panel history-panel">
+            <div class="history-heading">
+                <h2>Riwayat di browser ini</h2>
+                <button class="text-button" id="clear-history-button" type="button">Hapus riwayat</button>
+            </div>
+            <ul id="history-list" class="history-list"></ul>
+            <p id="history-empty" class="muted">Belum ada sesi tersimpan.</p>
+        </section>
+        <p class="storage-warning" id="storage-warning" hidden>Penyimpanan browser tidak tersedia. Sesi ini hanya hidup selama halaman terbuka.</p>
+    </main>
+
+    <script type="module" src="/aplikasi/guru-mode.js"></script>
+</body>
+</html>
